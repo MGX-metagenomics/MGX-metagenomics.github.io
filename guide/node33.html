@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2018 (Released Feb 1, 2018) -->
+<HTML>
+<HEAD>
+<TITLE>Annotating metagenome sequences</TITLE>
+<META NAME="description" CONTENT="Annotating metagenome sequences">
+<META NAME="keywords" CONTENT="main">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2018">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="main.css">
+
+<LINK REL="previous" HREF="node32.html">
+<LINK REL="up" HREF="node30.html">
+<LINK REL="next" HREF="node34.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html549"
+  HREF="node34.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html545"
+  HREF="node30.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html541"
+  HREF="node32.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html547"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html550"
+  HREF="node34.html">Creating hierarchical attributes</A>
+<B> Up:</B> <A NAME="tex2html546"
+  HREF="node30.html">Implementing custom analysis pipelines</A>
+<B> Previous:</B> <A NAME="tex2html542"
+  HREF="node32.html">Workflow requirements</A>
+ &nbsp; <B>  <A NAME="tex2html548"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00430000000000000000">
+Annotating metagenome sequences</A>
+</H1>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="annot"></A><A NAME="866"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.7:</STRONG>
+Basic template to illustrate sequence annotation. A <TT>StringGenerator</TT> is
+used to generate a label for the attribute type (<TT>CreateMGXAttributeType</TT>), which also requires job context
+information. The attribute type is required to create attributes, thus the node is connected to the <TT>CreateMGXAttribute</TT> node. Finally, the annotation can be saved to the project database (<TT>AnnotateAttribute</TT> node).</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><IMG
+  WIDTH="737" HEIGHT="253" ALIGN="BOTTOM" BORDER="0"
+ SRC="./annotate_templ.png"
+ ALT="Image annotate_templ"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Annotation of metagenome sequences requires an &ldquo;attribute type&rdquo; and an &ldquo;attribute&rdquo;. As an example, we will
+illustrate the implementation of a pipeline for the analysis of GC content within metagenome sequences.
+We use a <TT>StringGenerator</TT> node configured to generate the string &ldquo;GC&rdquo; to create a label for the
+attribute type. As GC content is indicated by a number, we appropriately configure the <TT>CreateMGXAttributeType</TT>
+node to emit a <SPAN  CLASS="textbf">basic</SPAN> (i.e. not hierarchical) as well as numerical &ldquo;attribute type&rdquo; (<A HREF="#createattrtype">3.8</A>).
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="createattrtype"></A><A NAME="867"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.8:</STRONG>
+Within the configuration dialog for the <TT>CreateMGXAttributeType</TT> node, structure and type of the generated attribute values are defined.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><IMG
+  WIDTH="323" HEIGHT="434" ALIGN="BOTTOM" BORDER="0"
+ SRC="./createattrtype.png"
+ ALT="Image createattrtype"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="annot2"></A><A NAME="868"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.9:</STRONG>
+Incomplete example; extending upon <A HREF="#annot">3.7</A>, the <TT>ReadCSF</TT> node will
+provide the necessary metagenome sequences to be annotated. Still, there is no actual analysis specified.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><IMG
+  WIDTH="747" HEIGHT="263" ALIGN="BOTTOM" BORDER="0"
+ SRC="./annotate_templ2.png"
+ ALT="Image annotate_templ2"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+In a second step, we use the <TT>ReadCSF</TT> node to obtain access to the individual metagenome sequences; as 
+MGX annotates sequences individually, a connection between <TT>ReadCSF</TT> and <TT>AnnotateAttribute</TT> is
+required (<A HREF="#annot2">3.9</A>). Subsequently, we implement the actual analysis, which is provided by the <TT>GCContent</TT>
+node. It will process all sequences and emit the corresponding GC content for each of them. To convert these values to
+appropriate &ldquo;attributes&rdquo;, an &ldquo;attribute type&rdquo; is required for each value; therefore, a <TT>Repeat</TT>
+node is inserted between nodes 5 and 7 (<A HREF="#annot3">3.10</A>).
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="annot3"></A><A NAME="869"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.10:</STRONG>
+Step 2: The <TT>GCContent</TT> node represents the actual analysis step; it is used
+to determine the GC content of a DNA sequence, which will then be converted into an &ldquo;attribute&rdquo;. Since an 
+&ldquo;attribute type&rdquo; is required for each &ldquo;attribute&rdquo;, a <TT>Repeat</TT> node is inserted between nodes 5 and 7.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><IMG
+  WIDTH="741" HEIGHT="366" ALIGN="BOTTOM" BORDER="0"
+ SRC="./annotate_templ3.png"
+ ALT="Image annotate_templ3"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Finally, as an annotation always refers to only a part of a sequence, we will need to generate the corresponding
+start and end coordinates; since GC content refers to the full sequence, we can use an <TT>ULongGenerator</TT> node
+configured to emit 0 (MGX uses 0-based coordinates) to generate the start coordinate; this node needs to be connected to
+a <TT>Repeat</TT> node to generate a series of 0s.
+<BR>
+The end coordinate can be created based on the sequences' length, with 1 subtracted, obtained through the
+<TT>GetLength</TT> and <TT>MinusOne</TT> nodes (<A HREF="#annot4">3.11</A>).
+<BR>
+The <TT>GetMGXJob</TT> node will retain its red border due to missing configuration; this, however, can be
+ignored, as appropriate configuration will be provided by the MGX framework automatically.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="annot4"></A><A NAME="870"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.11:</STRONG>
+Completing the workflow: the <TT>ULongGenerator</TT> and <TT>GetLength</TT> nodes
+are added to specify coordinates for the subregion of the DNA sequence described by the &ldquo;attribute&rdquo;; the
+start coordinate is simply repeated, while 1 is subtracted from the sequences length due to 0-based coordinates.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><IMG
+  WIDTH="936" HEIGHT="385" ALIGN="BOTTOM" BORDER="0"
+ SRC="./annotate_templ4.png"
+ ALT="Image annotate_templ4"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A NAME="tex2html551"
+  HREF="node34.html">Creating hierarchical attributes</A>
+</UL>
+<!--End of Table of Child-Links-->
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html549"
+  HREF="node34.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html545"
+  HREF="node30.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html541"
+  HREF="node32.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html547"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html550"
+  HREF="node34.html">Creating hierarchical attributes</A>
+<B> Up:</B> <A NAME="tex2html546"
+  HREF="node30.html">Implementing custom analysis pipelines</A>
+<B> Previous:</B> <A NAME="tex2html542"
+  HREF="node32.html">Workflow requirements</A>
+ &nbsp; <B>  <A NAME="tex2html548"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Sebastian Jaenicke, 2018-02-02
+</ADDRESS>
+</BODY>
+</HTML>

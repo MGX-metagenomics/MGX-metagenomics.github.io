@@ -1,0 +1,214 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2018 (Released Feb 1, 2018) -->
+<HTML>
+<HEAD>
+<TITLE>Quality control</TITLE>
+<META NAME="description" CONTENT="Quality control">
+<META NAME="keywords" CONTENT="main">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2018">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="main.css">
+
+<LINK REL="next" HREF="node19.html">
+<LINK REL="previous" HREF="node17.html">
+<LINK REL="up" HREF="node9.html">
+<LINK REL="next" HREF="node19.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html369"
+  HREF="node19.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html365"
+  HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html359"
+  HREF="node17.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html367"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html370"
+  HREF="node19.html">Defining and executing analysis</A>
+<B> Up:</B> <A NAME="tex2html366"
+  HREF="node9.html">Using the MGX application</A>
+<B> Previous:</B> <A NAME="tex2html360"
+  HREF="node17.html">Importing sequence data</A>
+ &nbsp; <B>  <A NAME="tex2html368"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00370000000000000000">
+Quality control</A>
+</H1>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="qcopen"></A><A NAME="248"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.14:</STRONG>
+After selecting a sequencing run object, the Quality Control component can be opened
+from its menubar icon (red circle).</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><IMG
+  WIDTH="330" HEIGHT="296" ALIGN="BOTTOM" BORDER="0"
+ SRC="./QCopen.png"
+ ALT="Image QCopen"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+After sequence import, Quality control reports generated within MGX should be inspected (<A HREF="#qcopen">2.14</A>) before proceding with data analysis.
+MGX currently offers three types of QC reports: Distribution of GC content, sequence length
+and nucleotide distribution within the DNA sequences. Those can be used to evaluate overall
+sequence data quality and check for possible signs of contamination.
+For demonstration purposes, data shown relates to the artificial <SPAN  CLASS="textbf">simHC</SPAN> metagenome dataset created by the
+FAMeS [<A
+ HREF="node35.html#SIMMETA">Mavromatis et&nbsp;al., 2007</A>] project. The actual sequence data is publicly available and can be obtained from
+the FAMeS web site (<TT><A NAME="tex2html19"
+  HREF="http://fames.jgi-psf.org/Retrieve_data.html">http://fames.jgi-psf.org/Retrieve_data.html</A></TT>).
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="qc1"></A><A NAME="257"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.15:</STRONG>
+GC distribution of the simHC dataset.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><IMG
+  WIDTH="378" HEIGHT="324" ALIGN="BOTTOM" BORDER="0"
+ SRC="./QCgc.png"
+ ALT="Image QCgc"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="qc2"></A><A NAME="262"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.16:</STRONG>
+Nucleotide distribution of the simHC dataset. A high fraction of uncalled bases
+is apparent from the chart.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><IMG
+  WIDTH="377" HEIGHT="318" ALIGN="BOTTOM" BORDER="0"
+ SRC="./QCnuc.png"
+ ALT="Image QCnuc"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="qc3"></A><A NAME="267"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.17:</STRONG>
+Read length distribution of the simHC dataset. </CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><IMG
+  WIDTH="377" HEIGHT="322" ALIGN="BOTTOM" BORDER="0"
+ SRC="./QCreadlen.png"
+ ALT="Image QCreadlen"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="qc4"></A><A NAME="286"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.18:</STRONG>
+Nucleotide distribution examples.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>        <BR>
+<IMG
+ WIDTH="167" HEIGHT="143" BORDER="0"
+ SRC="img3.png"
+ ALT="\begin{subfigure}
+% latex2html id marker 271
+[b]{0.3\textwidth}
+\includegraphic...
+...=\textwidth]{img/mgx/highGCnucl}
+\caption{High-GC (65\%) data}
+\end{subfigure}">
+<BR><BR>
+<IMG
+ WIDTH="167" HEIGHT="143" BORDER="0"
+ SRC="img4.png"
+ ALT="\begin{subfigure}
+% latex2html id marker 276
+[b]{0.3\textwidth}
+\includegraphics[width=\textwidth]{img/mgx/ampliconNucl}
+\caption{Amplicon data}
+\end{subfigure}">
+<BR>
+        <BR>
+<IMG
+ WIDTH="167" HEIGHT="142" BORDER="0"
+ SRC="img5.png"
+ ALT="\begin{subfigure}
+% latex2html id marker 281
+[b]{0.3\textwidth}
+\includegraphic...
+...dth=\textwidth]{img/mgx/adapterNucl}
+\caption{Adapter residue}
+\end{subfigure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Depending on the kind of sequence data, different patterns might emerge (<A HREF="#qc4">2.18</A>),
+which might or might not warrant any further action. While small amounts of e.g. 
+adapter residue are sometimes encountered and might be considered acceptable, it is up to the
+individual researcher to check back with their sequencing provider and ask for
+adapter sequences to execute additional trimming.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html369"
+  HREF="node19.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html365"
+  HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html359"
+  HREF="node17.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html367"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html370"
+  HREF="node19.html">Defining and executing analysis</A>
+<B> Up:</B> <A NAME="tex2html366"
+  HREF="node9.html">Using the MGX application</A>
+<B> Previous:</B> <A NAME="tex2html360"
+  HREF="node17.html">Importing sequence data</A>
+ &nbsp; <B>  <A NAME="tex2html368"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Sebastian Jaenicke, 2018-02-02
+</ADDRESS>
+</BODY>
+</HTML>

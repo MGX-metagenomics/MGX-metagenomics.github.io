@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2018 (Released Feb 1, 2018) -->
+<HTML>
+<HEAD>
+<TITLE>Visualization of results</TITLE>
+<META NAME="description" CONTENT="Visualization of results">
+<META NAME="keywords" CONTENT="main">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2018">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="main.css">
+
+<LINK REL="next" HREF="node25.html">
+<LINK REL="previous" HREF="node19.html">
+<LINK REL="up" HREF="node9.html">
+<LINK REL="next" HREF="node23.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html417"
+  HREF="node23.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html413"
+  HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html407"
+  HREF="node21.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html415"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html418"
+  HREF="node23.html">Exporting sequences</A>
+<B> Up:</B> <A NAME="tex2html414"
+  HREF="node9.html">Using the MGX application</A>
+<B> Previous:</B> <A NAME="tex2html408"
+  HREF="node21.html">Monitoring job progress</A>
+ &nbsp; <B>  <A NAME="tex2html416"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00390000000000000000">
+Visualization of results</A>
+</H1>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="viz1"></A><A NAME="325"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.24:</STRONG>
+Icon for the visualization module.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><IMG
+  WIDTH="313" HEIGHT="289" ALIGN="BOTTOM" BORDER="0"
+ SRC="./VizOpen.png"
+ ALT="Image VizOpen"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="viz2"></A><A NAME="330"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.25:</STRONG>
+Components of the visualization module. The bottom window is
+used to create and define groups, while the top window allows to select result and visualization
+type, customize options and display the final chart.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><IMG
+  WIDTH="1034" HEIGHT="924" ALIGN="BOTTOM" BORDER="0"
+ SRC="./VizComponent.png"
+ ALT="Image VizComponent"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+The visualization component actually consists of two separate windows (<A HREF="#viz2">2.25</A>). The Group
+Window is located at the bottom and used to create, name and define groups used for data display.
+Sequencing runs can be added to individual groups using <SPAN  CLASS="textit">Drag and Drop</SPAN>. While any
+sequencing run can be present in several groups at the same time, it is not possible to add
+it to a group more than once. Groups may be assigned a name, their display color can be chosen
+by the user, and they may be temporarily excluded from display.
+<BR>
+The main visualization window is shown at the top; once sequencing runs are added or changed, 
+the type of analysis result to be shown can be chosen on the top right. Afterwards, the desired
+visualization type is selected and may be customized, as well.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="viz3"></A><A NAME="337"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.26:</STRONG>
+Visualization example displaying a bar chart for two groups.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><IMG
+  WIDTH="1038" HEIGHT="920" ALIGN="BOTTOM" BORDER="0"
+ SRC="./VizDemo.png"
+ ALT="Image VizDemo"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Figure <A HREF="#viz3">2.26</A> shows a simple visualization example. Two groups were defined containing the simLC and simMC metagenomes
+in the first and the simHC metagenome in the second group. The main visualization window shows a bar chart
+generated for these groups based on assigned EC numbers. To account for differences in dataset size, both
+groups are normalized to fractions.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="viz4"></A><A NAME="406"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.27:</STRONG>
+In case a result is provided by more than one job, e.g. different taxonomic assignment methods,
+a dialog allows to select between jobs. In this example, taxonomic assignments are provided by MGX pipelines employing Kraken [<A
+ HREF="node35.html#KRAKEN">Wood and Salzberg, 2014</A>]
+as well as MetaCV [<A
+ HREF="node35.html#METACV">Liu et&nbsp;al., 2012</A>].</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><IMG
+  WIDTH="623" HEIGHT="513" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ConflictResolver.png"
+ ALT="Image ConflictResolver"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Whenever a selected result type is provided by more than one analysis job, an interactive dialog allows the user to
+review possible jobs and select one (<A HREF="#viz4">2.27</A>). This scenario will occur when a tool is executed several 
+times with different parameters, or when different taxonomic classifiers were used to analyse a dataset.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A NAME="tex2html419"
+  HREF="node23.html">Exporting sequences</A>
+<LI><A NAME="tex2html420"
+  HREF="node24.html">Biodiversity indices</A>
+</UL>
+<!--End of Table of Child-Links-->
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html417"
+  HREF="node23.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html413"
+  HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html407"
+  HREF="node21.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html415"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html418"
+  HREF="node23.html">Exporting sequences</A>
+<B> Up:</B> <A NAME="tex2html414"
+  HREF="node9.html">Using the MGX application</A>
+<B> Previous:</B> <A NAME="tex2html408"
+  HREF="node21.html">Monitoring job progress</A>
+ &nbsp; <B>  <A NAME="tex2html416"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Sebastian Jaenicke, 2018-02-02
+</ADDRESS>
+</BODY>
+</HTML>
