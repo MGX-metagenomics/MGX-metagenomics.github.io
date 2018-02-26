@@ -3,8 +3,169 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de">
  <head>
    <title>MGX metagenome analysis platform</title>
+   <link rel="stylesheet" media="all" href="main.css" />
  </head>
  <body>
-   <a href="guide/index.html">MGX user guide</a>
+<br>
+   <img class="logo" src="mgx_logo.png"></img>
+   <h1>MGX metagenome analysis platform</h1>
+
+   <div>
+<p>
+The characterization of microbial communities based on
+sequencing and analysis of their genetic information has become a popular
+approach also referred to as metagenomics; in particular, the recent advances in
+sequencing technologies have enabled researchers to study even the most
+complex communities.
+Metagenome analysis, the assignment of sequences to taxonomic and
+functional entities, however, remains a tedious task: large amounts of data need
+to be processed. There are a number of approaches addressing particular aspects,
+but scientific questions are often too specific to be answered by a general-purpose
+method.
+We present MGX, a flexible and extensible client/server-framework for
+the management and analysis of metagenomic datasets; MGX features a
+comprehensive set of adaptable workflows required for taxonomic and functional
+metagenome analysis, combined with an intuitive and easy-to-use graphical user
+interface offering customizable result visualizations. At the same time, MGX
+allows to include own data sources and devise custom analysis pipelines, thus
+enabling researchers to perform basic as well as highly specific analyses within a
+single application.
+With MGX, we provide a novel metagenome analysis platform
+giving researchers access to the most recent analysis tools. MGX covers
+taxonomic and functional metagenome analysis, statistical evaluation and a wide
+range of visualizations easing data interpretation. Its default taxonomic
+classification pipeline provides equivalent or superior results in comparison to
+existing tools.
+</p>
+   </div>
+
+<div class="slideshow-container" >
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <img src="slides/1.png" style="width:80%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="slides/2.png" style="width:80%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="slides/3.png" style="width:80%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="slides/4.png" style="width:80%">
+  </div>
+
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+
+<script>
+ var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+  <h3>Features</h2>
+  <p>
+    <ul>
+      <li>Data and metadata capture</li>
+      <li>Quality control reports</li>
+      <li>&gt; 20 analysis <a href="https://github.com/MGX-metagenomics/pipelines">pipelines</a> for taxonomic and functional analysis</li>
+      <li>High-quality charts and interactive visualizations</li>
+      <li>Statistics: PCA, PCoA, Rarefaction, ..</li>
+      <li>Fragment recruitment</li>
+      <li>Sequence export</li>
+    </ul>
+  </p>
+
+  <h3>Project request</h3>
+  <p>
+    We operate and maintain two public MGX server instances hosted at the <a href="https://www.computational.bio.uni-giessen.de/">Bioinformatics and Systems Biology</a> group at <a href="http://www.uni-giessen.de/">JLU Giessen</a>
+    and <a href="http://www.cebitec.uni-bielefeld.de">Center for Biotechnology</a>, <a href="http://www.uni-bielefeld.de">Bielefeld University</a>. To
+    obtain a protected project for analysis of own metagenome data, please 
+    <a href="mailto:mgx@computational.bio.uni-giessen.de?subject=MGX%20private%20project%20request">get in touch with us</a> and provide the following
+    information:
+    
+    <ul>
+      <li>suggested short project name, e.g. MGX_AcidMine</li>
+      <li>a one-line description of your project, e.g. Acid Mine Drainage metagenome</li>
+      <li>a contact address of a single person responsible for the project (PI or group leader)</li>
+    </ul>
+  </p>
+
+  <h3>Documentation</h2>
+  <p>
+    The MGX user guide is available as an online 
+    <a href="guide/index.html">HTML</a> or
+    <a href="https://github.com/MGX-metagenomics/userguide/releases">PDF</a>
+    version.
+  </p>
+
+  <h3>MGX graphical user interface</h3>
+  <p>
+    The latest version of the MGX client application is provided as a platform-independent .zip archive at <a href="https://github.com/MGX-metagenomics/MGX-gui/releases">MGX GUI client download</a>.
+  </p>
+
+  <h3>Funding</h3>
+  <img class="logo" src="denbi_logo.png"></img>
+  <p>
+    Funding for the operation and maintenance of MGX is provided by the 
+    <a href="http://www.bmbf.de">German Federal Ministry of Education and Research (BMBF)</a> project 
+    <q>Bielefeld-Gie&szlig;en Center for Microbial Bioinformatics - BiGi</q> (grant 031A533) within the
+    German Network for Bioinformatics Infrastructure (de.NBI).
+  </p>
+
+  <h3>Additional links</h3>
+  <p>
+    <ul>
+      <li>Synthetic metagenomes used in the MGX manuscript are available from the <a href="http://www.cebitec.uni-bielefeld.de/">CeBiTec</a> FTP <a href="ftp://ftp.cebitec.uni-bielefeld.de/pub/software/mgx/benchmark_data/">server</a>.</li>
+      <li><a href="https://www.computational.bio.uni-giessen.de/">Bioinformatics and Systems Biology at JLU Giessen</a></li>
+      <li><a href="https://www.denbi.de/">de.NBI - German network for bioinformatics infrastructure</a></li>
+    </ul>
+  </p>
+
+ <hr>
+ <p class="footer">
+ Sebastian Jaenicke, 2018-02-26
+ </p>
+
  </body>
 </html>
