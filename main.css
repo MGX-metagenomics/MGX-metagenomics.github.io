@@ -9,9 +9,10 @@ h1 { font-family: Verdana, sans-serif; margin: 40px; background-color: lightgrey
 h2 { font-family: Verdana, sans-serif; margin: 40px}
 h3 { font-family: Verdana, sans-serif; margin: 40px; background-color: lightgrey; padding: 8px; }
 ul { font-family: Verdana, sans-serif; margin: 40px}
+hr { margin-left: 40px; margin-right: 40px; }
 p { font-family: Verdana, sans-serif; margin: 40px; text-align: justify; }
 
-.footer { font-family: Verdana, sans-serif; margin: 10px; }
+.footer { font-family: Verdana, sans-serif; font-style: italic; margin-left: 40px; margin-top: 5px; margin-bottom: 5px; }
 
 .mySlides { display: none; }
 img {
