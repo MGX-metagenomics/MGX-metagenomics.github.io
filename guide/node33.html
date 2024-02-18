@@ -1,7 +1,7 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE HTML>
 
-<!--Converted with LaTeX2HTML 2018 (Released Feb 1, 2018) -->
-<HTML>
+<!--Converted with LaTeX2HTML 2021.2 (Released July 1, 2021) -->
+<HTML lang="en">
 <HEAD>
 <TITLE>Workflow requirements</TITLE>
 <META NAME="description" CONTENT="Workflow requirements">
@@ -9,46 +9,46 @@
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
 
-<META NAME="Generator" CONTENT="LaTeX2HTML v2018">
-<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2021.2">
 
 <LINK REL="STYLESHEET" HREF="main.css">
 
 <LINK REL="next" HREF="node34.html">
 <LINK REL="previous" HREF="node32.html">
-<LINK REL="up" HREF="node31.html">
 <LINK REL="next" HREF="node34.html">
 </HEAD>
 
 <BODY >
 
 <DIV CLASS="navigation"><!--Navigation Panel-->
-<A NAME="tex2html551"
-  HREF="node34.html">
-<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html547"
-  HREF="node31.html">
-<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html541"
-  HREF="node32.html">
-<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html549"
+<A
+ HREF="node34.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node31.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node32.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html235"
   HREF="node1.html">
-<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
 <BR>
-<B> Next:</B> <A NAME="tex2html552"
-  HREF="node34.html">Annotating metagenome sequences</A>
-<B> Up:</B> <A NAME="tex2html548"
-  HREF="node31.html">Implementing custom analysis pipelines</A>
-<B> Previous:</B> <A NAME="tex2html542"
-  HREF="node32.html">Getting started</A>
- &nbsp; <B>  <A NAME="tex2html550"
+<B> Next:</B> <A
+ HREF="node34.html">Annotating metagenome sequences</A>
+<B> Up:</B> <A
+ HREF="node31.html">Implementing custom analysis pipelines</A>
+<B> Previous:</B> <A
+ HREF="node32.html">Getting started</A>
+ &nbsp; <B>  <A ID="tex2html236"
   HREF="node1.html">Contents</A></B> 
 <BR>
 <BR></DIV>
 <!--End of Navigation Panel-->
 
-<H1><A NAME="SECTION00420000000000000000">
+<H1><A ID="SECTION00420000000000000000">
 Workflow requirements</A>
 </H1>
 
@@ -57,66 +57,63 @@ In order to design custom Conveyor workflows for later usage within the MGX plat
 are several constraints to be met which will be described in more detail.
 <BR>
 <P>
-First of all, a dedicated <TT>GetMGXJob</TT> node (Figure <A HREF="#getmgxjob">3.4</A>) has to be present within the workflow; in addition,
+First of all, a dedicated <SPAN  CLASS="texttt">GetMGXJob</SPAN> node (Figure <A HREF="#getmgxjob">3.4</A>) has to be present within the workflow; in addition,
 this node has to be named "<SPAN  CLASS="textbf">mgx</SPAN>". During execution of a pipeline within MGX, this node is
 configured via an external configuration file, providing required information about a jobs
 context, like e.g. access to a project database and associated storage.
 <BR>
 <P>
 
-<DIV ALIGN="CENTER"><A NAME="getmgxjob"></A><A NAME="863"></A>
+<DIV class="CENTER"><A ID="getmgxjob"></A><A ID="864"></A>
 <TABLE>
-<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.4:</STRONG>
-The <TT>GetMGXJob</TT> node provides necessary context for executing a
+<CAPTION class="BOTTOM"><STRONG>Figure 3.4:</STRONG>
+The <SPAN  CLASS="texttt">GetMGXJob</SPAN> node provides necessary context for executing a
 workflow within MGX, such as database access. By convention, this node has to be named <SPAN  CLASS="textbf">mgx</SPAN>.</CAPTION>
 <TR><TD>
-<DIV ALIGN="CENTER">
-
-</DIV><IMG
-  WIDTH="158" HEIGHT="89" ALIGN="BOTTOM" BORDER="0"
+<DIV class="CENTER"><IMG
+  WIDTH="187" HEIGHT="105" STYLE=""
  SRC="./getjob.png"
- ALT="Image getjob"></TD></TR>
+ ALT="Image getjob">
+</DIV></TD></TR>
 </TABLE>
 </DIV>
 
 <P>
-Access to metagenome DNA sequences is provided via the <TT>ReadCSF</TT> node, which will provide
+Access to metagenome DNA sequences is provided via the <SPAN  CLASS="texttt">ReadCSF</SPAN> node, which will provide
 all metagenome sequences for a sequencing run object within MGX, except those for which the 
 &ldquo;discard&rdquo; flag has already been set. As pipelines are always executed
-for one single analysis job, this node needs to be connected to the <TT>GetMGXJob</TT> node (<A HREF="#readcsf">3.5</A>).
+for one single analysis job, this node needs to be connected to the <SPAN  CLASS="texttt">GetMGXJob</SPAN> node (<A HREF="#readcsf">3.5</A>).
 Figure <A HREF="#simple">3.6</A> shows a minimal example of a Conveyor-based pipeline for use within the MGX framework.
 Once executed, the pipeline would set the <SPAN  CLASS="textit">discard</SPAN> flag for all sequences.
 
 <P>
 
-<DIV ALIGN="CENTER"><A NAME="readcsf"></A><A NAME="864"></A>
+<DIV class="CENTER"><A ID="readcsf"></A><A ID="865"></A>
 <TABLE>
-<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.5:</STRONG>
-The <TT>ReadCSF</TT> node is used to obtained metagenome sequence data 
-from within MGX; it has one input and needs to be connected to the <TT>GetMGXJob</TT> node.</CAPTION>
+<CAPTION class="BOTTOM"><STRONG>Figure 3.5:</STRONG>
+The <SPAN  CLASS="texttt">ReadCSF</SPAN> node is used to obtained metagenome sequence data 
+from within MGX; it has one input and needs to be connected to the <SPAN  CLASS="texttt">GetMGXJob</SPAN> node.</CAPTION>
 <TR><TD>
-<DIV ALIGN="CENTER">
-
-</DIV><IMG
-  WIDTH="378" HEIGHT="92" ALIGN="BOTTOM" BORDER="0"
+<DIV class="CENTER"><IMG
+  WIDTH="372" HEIGHT="91" STYLE=""
  SRC="./getjobreadcsf.png"
- ALT="Image getjobreadcsf"></TD></TR>
+ ALT="Image getjobreadcsf">
+</DIV></TD></TR>
 </TABLE>
 </DIV>
 
 <P>
 
-<DIV ALIGN="CENTER"><A NAME="simple"></A><A NAME="865"></A>
+<DIV class="CENTER"><A ID="simple"></A><A ID="866"></A>
 <TABLE>
-<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.6:</STRONG>
+<CAPTION class="BOTTOM"><STRONG>Figure 3.6:</STRONG>
 A minimal working example of a pipeline developed for MGX, which would set the <SPAN  CLASS="textit">discard</SPAN> flag for all sequences.</CAPTION>
 <TR><TD>
-<DIV ALIGN="CENTER">
-
-</DIV><IMG
-  WIDTH="613" HEIGHT="90" ALIGN="BOTTOM" BORDER="0"
+<DIV class="CENTER"><IMG
+  WIDTH="497" HEIGHT="73" STYLE=""
  SRC="./simple.png"
- ALT="Image simple"></TD></TR>
+ ALT="Image simple">
+</DIV></TD></TR>
 </TABLE>
 </DIV>
 
@@ -124,26 +121,26 @@ A minimal working example of a pipeline developed for MGX, which would set the <
 
 <DIV CLASS="navigation"><HR>
 <!--Navigation Panel-->
-<A NAME="tex2html551"
-  HREF="node34.html">
-<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html547"
-  HREF="node31.html">
-<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html541"
-  HREF="node32.html">
-<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html549"
+<A
+ HREF="node34.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node31.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node32.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html235"
   HREF="node1.html">
-<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
 <BR>
-<B> Next:</B> <A NAME="tex2html552"
-  HREF="node34.html">Annotating metagenome sequences</A>
-<B> Up:</B> <A NAME="tex2html548"
-  HREF="node31.html">Implementing custom analysis pipelines</A>
-<B> Previous:</B> <A NAME="tex2html542"
-  HREF="node32.html">Getting started</A>
- &nbsp; <B>  <A NAME="tex2html550"
+<B> Next:</B> <A
+ HREF="node34.html">Annotating metagenome sequences</A>
+<B> Up:</B> <A
+ HREF="node31.html">Implementing custom analysis pipelines</A>
+<B> Previous:</B> <A
+ HREF="node32.html">Getting started</A>
+ &nbsp; <B>  <A ID="tex2html236"
   HREF="node1.html">Contents</A></B> </DIV>
 <!--End of Navigation Panel-->
 <ADDRESS>
