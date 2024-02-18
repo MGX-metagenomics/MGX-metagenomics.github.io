@@ -3,8 +3,8 @@
 <!--Converted with LaTeX2HTML 2018 (Released Feb 1, 2018) -->
 <HTML>
 <HEAD>
-<TITLE>Getting started</TITLE>
-<META NAME="description" CONTENT="Getting started">
+<TITLE>Implementing custom analysis pipelines</TITLE>
+<META NAME="description" CONTENT="Implementing custom analysis pipelines">
 <META NAME="keywords" CONTENT="main">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -14,128 +14,128 @@
 
 <LINK REL="STYLESHEET" HREF="main.css">
 
-<LINK REL="next" HREF="node32.html">
-<LINK REL="previous" HREF="node30.html">
-<LINK REL="up" HREF="node30.html">
+<LINK REL="next" HREF="node36.html">
+<LINK REL="previous" HREF="node9.html">
+<LINK REL="up" HREF="main.html">
 <LINK REL="next" HREF="node32.html">
 </HEAD>
 
 <BODY >
 
 <DIV CLASS="navigation"><!--Navigation Panel-->
-<A NAME="tex2html526"
+<A NAME="tex2html523"
   HREF="node32.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html522"
-  HREF="node30.html">
+<A NAME="tex2html519"
+  HREF="main.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html516"
+<A NAME="tex2html513"
   HREF="node30.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html524"
+<A NAME="tex2html521"
   HREF="node1.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
 <BR>
-<B> Next:</B> <A NAME="tex2html527"
-  HREF="node32.html">Workflow requirements</A>
-<B> Up:</B> <A NAME="tex2html523"
-  HREF="node30.html">Implementing custom analysis pipelines</A>
-<B> Previous:</B> <A NAME="tex2html517"
-  HREF="node30.html">Implementing custom analysis pipelines</A>
- &nbsp; <B>  <A NAME="tex2html525"
+<B> Next:</B> <A NAME="tex2html524"
+  HREF="node32.html">Getting started</A>
+<B> Up:</B> <A NAME="tex2html520"
+  HREF="main.html">MGX User Guide</A>
+<B> Previous:</B> <A NAME="tex2html514"
+  HREF="node30.html">Search</A>
+ &nbsp; <B>  <A NAME="tex2html522"
   HREF="node1.html">Contents</A></B> 
 <BR>
 <BR></DIV>
 <!--End of Navigation Panel-->
 
-<H1><A NAME="SECTION00410000000000000000">
-Getting started</A>
+<H1><A NAME="SECTION00400000000000000000"></A>
+<A NAME="custom"></A>
+<BR>
+Implementing custom analysis pipelines
 </H1>
 
 <P>
-In order to implement a custom workflow, the Conveyor Designer needs to be configured
-with a definition of available Conveyor plugins and node types. This is easily 
-achieved by importing a plugin dump file, which contains a list of data types and
-nodes provided by a Conveyor installation.
+All offered analysis tools provided by the MGX platform are implemented as workflows
+for the Conveyor [<A
+ HREF="node36.html#CONVEYOR">Linke et&nbsp;al., 2011</A>] workflow engine developed by B. Linke. Within Conveyor,
+tools are provided as so-called &rdquo;nodes&rdquo;, which resemble individual processing steps
+and which are used to implement novel analysis methods by simply arranging and connecting
+them into a larger workflow. Conveyor currently includes plugins providing typical
+bioinformatics tools like BLAST or HMMer, but has recently been extended with dedicated
+plugins aimed at metagenome analysis, like MetaCV, MetaPhyler or MetaPhlAn, which all
+perform taxonomic analysis.
+A dedicated Conveyor plugin provides access to MGX data structures, thereby enabling the
+analysis of metagenomes stored in the MGX system with processing tools provided by Conveyor
+itself.
+While workflow definitions are stored in a XML-based format, a graphical user interface,
+the Conveyor Designer (<A HREF="#designer">3.1</A>), enables users to implement new analysis by simply
+placing and connecting nodes.
 
 <P>
-To use the Designer to implement a workflow for the MGX framework, a corresponding
-plugin dump file can be obtained from within MGX by right-clicking on the 
-project name (<A HREF="#getdump">3.2</A>).
 
-<P>
-
-<DIV ALIGN="CENTER"><A NAME="getdump"></A><A NAME="743"></A>
+<DIV ALIGN="CENTER"><A NAME="designer"></A><A NAME="740"></A>
 <TABLE>
-<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.2:</STRONG>
-A plugin dump file for use with the Conveyor Designer can be obtained from within MGX
-by right-clicking on the project name.</CAPTION>
-<TR><TD>
-<DIV ALIGN="CENTER">
-
-</DIV><IMG
-  WIDTH="393" HEIGHT="75" ALIGN="BOTTOM" BORDER="0"
- SRC="./getdump.png"
- ALT="Image getdump"></TD></TR>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.1:</STRONG>
+The Conveyor Designer application allows easy and user-friendly
+development of custom analysis algorithms in a graphical way.</CAPTION>
+<TR><TD><IMG
+  WIDTH="1558" HEIGHT="1036" ALIGN="BOTTOM" BORDER="0"
+ SRC="./designer.png"
+ ALT="Image designer"></TD></TR>
 </TABLE>
 </DIV>
 
 <P>
-Afterwards, start the Designer application and define a new provider (Right-click on &ldquo;Available providers&rdquo;). 
-Make sure to specify &ldquo;Plugin dump file&rdquo; (<A HREF="#loaddump">3.3</A>) as the type of plugin set and select the file
-generated by MGX. Once the plugin
-dump file has been imported, you are ready to implement new workflows. Initially starting with an empty sheet,
-nodes can be dragged from the list of all available nodes on the left and placed onto the sheet. Node connections
-are created by clicking on a node, keeping the mouse button pressed and releasing it over the connections target
-node, thus creating the link; in ambiguous cases, e.g. for nodes with several unconnected
-inputs/outputs, a dialog will allow to select the desired connection.
-Nodes may also require node-specific configuration, which can be edited from a nodes context menu.
-A red border around a node indicates missing configuration items or connections.
+As Conveyor is actively developed and new tools are continously integrated, giving a thorough
+introduction to Conveyor is beyond the scope of this document. The most up-to-date documentation describing
+Conveyor itself and the Conveyor Designer in particular can be found at the Conveyor web
+site <TT><A NAME="tex2html39"
+  HREF="http://www.uni-giessen.de/fbz/fb08/Inst/bioinformatik/software/Conveyor">http://www.uni-giessen.de/fbz/fb08/Inst/bioinformatik/software/Conveyor</A></TT>. 
 
 <P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
 
-<DIV ALIGN="CENTER"><A NAME="loaddump"></A><A NAME="749"></A>
-<TABLE>
-<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.3:</STRONG>
-Importing a plugin dump file into the Conveyor Designer.</CAPTION>
-<TR><TD>
-<DIV ALIGN="CENTER">
-
-</DIV><IMG
-  WIDTH="602" HEIGHT="451" ALIGN="BOTTOM" BORDER="0"
- SRC="./loaddump.png"
- ALT="Image loaddump"></TD></TR>
-</TABLE>
-</DIV>
-
-<P>
+<UL CLASS="ChildLinks">
+<LI><A NAME="tex2html525"
+  HREF="node32.html">Getting started</A>
+<LI><A NAME="tex2html526"
+  HREF="node33.html">Workflow requirements</A>
+<LI><A NAME="tex2html527"
+  HREF="node34.html">Annotating metagenome sequences</A>
+<UL>
+<LI><A NAME="tex2html528"
+  HREF="node35.html">Creating hierarchical attributes</A>
+</UL></UL>
+<!--End of Table of Child-Links-->
 
 <DIV CLASS="navigation"><HR>
 <!--Navigation Panel-->
-<A NAME="tex2html526"
+<A NAME="tex2html523"
   HREF="node32.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html522"
-  HREF="node30.html">
+<A NAME="tex2html519"
+  HREF="main.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html516"
+<A NAME="tex2html513"
   HREF="node30.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html524"
+<A NAME="tex2html521"
   HREF="node1.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
 <BR>
-<B> Next:</B> <A NAME="tex2html527"
-  HREF="node32.html">Workflow requirements</A>
-<B> Up:</B> <A NAME="tex2html523"
-  HREF="node30.html">Implementing custom analysis pipelines</A>
-<B> Previous:</B> <A NAME="tex2html517"
-  HREF="node30.html">Implementing custom analysis pipelines</A>
- &nbsp; <B>  <A NAME="tex2html525"
+<B> Next:</B> <A NAME="tex2html524"
+  HREF="node32.html">Getting started</A>
+<B> Up:</B> <A NAME="tex2html520"
+  HREF="main.html">MGX User Guide</A>
+<B> Previous:</B> <A NAME="tex2html514"
+  HREF="node30.html">Search</A>
+ &nbsp; <B>  <A NAME="tex2html522"
   HREF="node1.html">Contents</A></B> </DIV>
 <!--End of Navigation Panel-->
 <ADDRESS>
-Sebastian Jaenicke, 2020-04-28
+Sebastian Jaenicke, 2024-02-18
 </ADDRESS>
 </BODY>
 </HTML>

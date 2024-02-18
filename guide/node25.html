@@ -3,8 +3,8 @@
 <!--Converted with LaTeX2HTML 2018 (Released Feb 1, 2018) -->
 <HTML>
 <HEAD>
-<TITLE>Uploading own files</TITLE>
-<META NAME="description" CONTENT="Uploading own files">
+<TITLE>Biodiversity indices</TITLE>
+<META NAME="description" CONTENT="Biodiversity indices">
 <META NAME="keywords" CONTENT="main">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -14,81 +14,72 @@
 
 <LINK REL="STYLESHEET" HREF="main.css">
 
-<LINK REL="next" HREF="node26.html">
-<LINK REL="previous" HREF="node22.html">
-<LINK REL="up" HREF="node9.html">
+<LINK REL="previous" HREF="node24.html">
+<LINK REL="up" HREF="node23.html">
 <LINK REL="next" HREF="node26.html">
 </HEAD>
 
 <BODY >
 
 <DIV CLASS="navigation"><!--Navigation Panel-->
-<A NAME="tex2html452"
+<A NAME="tex2html453"
   HREF="node26.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html448"
-  HREF="node9.html">
+<A NAME="tex2html449"
+  HREF="node23.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html442"
+<A NAME="tex2html445"
   HREF="node24.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html450"
+<A NAME="tex2html451"
   HREF="node1.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
 <BR>
-<B> Next:</B> <A NAME="tex2html453"
-  HREF="node26.html">Reference mapping</A>
-<B> Up:</B> <A NAME="tex2html449"
-  HREF="node9.html">Using the MGX application</A>
-<B> Previous:</B> <A NAME="tex2html443"
-  HREF="node24.html">Biodiversity indices</A>
- &nbsp; <B>  <A NAME="tex2html451"
+<B> Next:</B> <A NAME="tex2html454"
+  HREF="node26.html">Uploading own files</A>
+<B> Up:</B> <A NAME="tex2html450"
+  HREF="node23.html">Visualization of results</A>
+<B> Previous:</B> <A NAME="tex2html446"
+  HREF="node24.html">Exporting sequences</A>
+ &nbsp; <B>  <A NAME="tex2html452"
   HREF="node1.html">Contents</A></B> 
 <BR>
 <BR></DIV>
 <!--End of Navigation Panel-->
 
-<H1><A NAME="SECTION003100000000000000000">
-Uploading own files</A>
-</H1>
+<H2><A NAME="SECTION003102000000000000000">
+Biodiversity indices</A>
+</H2>
 
 <P>
-For each project, MGX provides dedicated storage (<A HREF="#serverfs">2.30</A>) in order to allow users to
-provide custom data, subsequently to be used with analysis pipelines. Thus,
-own sequence collections or HMM model files for genes of interest can easily
-be uploaded and later on be included into analysis pipelines.
-<BR>
-<P>
 
-<DIV ALIGN="CENTER"><A NAME="serverfs"></A><A NAME="368"></A>
+<DIV ALIGN="CENTER"><A NAME="biodiv"></A><A NAME="353"></A>
 <TABLE>
-<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.30:</STRONG>
-Each project includes flat storage where custom
-data can be stored, e.g. own FASTA files to be used as reference databases
-for metagenome analysis.</CAPTION>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.29:</STRONG>
+Biodiversity indices (bottom left) such as ACE or Shannon are computed for the currently
+selected visualization group.</CAPTION>
 <TR><TD>
 <DIV ALIGN="CENTER">
 
 </DIV><IMG
-  WIDTH="233" HEIGHT="150" ALIGN="BOTTOM" BORDER="0"
- SRC="./serverfs.png"
- ALT="Image serverfs"></TD></TR>
+  WIDTH="1360" HEIGHT="1036" ALIGN="BOTTOM" BORDER="0"
+ SRC="./BioDiversity.png"
+ ALT="Image BioDiversity"></TD></TR>
 </TABLE>
 </DIV>
 
 <P>
-While it may be necessary to implement an own pipeline depending on the
-desired kind of analysis, the MGX repository hosts predefined pipeline
-templates addressing the most common cases: The &ldquo;BestHit-Blast&rdquo; template
-can be used to annotate metagenome sequences with the description of a
-Blast hit after the user has uploaded a FASTA file containing amino acid
-sequences, and the &ldquo;BestHit-HMM&rdquo; template provides the same functionality
-for hidden Markov models (HMMs).
+The visualization module features another component used to display commonly used biodiversity indices, such as
+the ACE, Shannon [<A
+ HREF="node36.html#SHANNON">Spellerberg and Fedor, 2003</A>], Chao1 [<A
+ HREF="node36.html#DIVERSITY">Hughes et&nbsp;al., 2002</A>] and Simpson [<A
+ HREF="node36.html#SIMPSON">Simpson, 1949</A>] indices. The component will automatically show the index values for the
+currently selected visualization group based on the chosen attribute type (<A HREF="#biodiv">2.29</A>).
 
 <P>
 <BR><HR>
 <ADDRESS>
-Sebastian Jaenicke, 2020-04-28
+Sebastian Jaenicke, 2024-02-18
 </ADDRESS>
 </BODY>
 </HTML>

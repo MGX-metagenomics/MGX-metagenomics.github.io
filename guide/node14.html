@@ -23,26 +23,26 @@
 <BODY >
 
 <DIV CLASS="navigation"><!--Navigation Panel-->
-<A NAME="tex2html320"
+<A NAME="tex2html321"
   HREF="node15.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html316"
+<A NAME="tex2html317"
   HREF="node9.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html310"
+<A NAME="tex2html311"
   HREF="node13.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html318"
+<A NAME="tex2html319"
   HREF="node1.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
 <BR>
-<B> Next:</B> <A NAME="tex2html321"
+<B> Next:</B> <A NAME="tex2html322"
   HREF="node15.html">Creating a new habitat</A>
-<B> Up:</B> <A NAME="tex2html317"
+<B> Up:</B> <A NAME="tex2html318"
   HREF="node9.html">Using the MGX application</A>
-<B> Previous:</B> <A NAME="tex2html311"
+<B> Previous:</B> <A NAME="tex2html312"
   HREF="node13.html">Metadata</A>
- &nbsp; <B>  <A NAME="tex2html319"
+ &nbsp; <B>  <A NAME="tex2html320"
   HREF="node1.html">Contents</A></B> 
 <BR>
 <BR></DIV>
@@ -54,7 +54,7 @@ Connecting to a MGX server</A>
 
 <P>
 
-<DIV ALIGN="CENTER"><A NAME="startup"></A><A NAME="172"></A>
+<DIV ALIGN="CENTER"><A NAME="startup"></A><A NAME="166"></A>
 <TABLE>
 <CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.1:</STRONG>
 Screenshot of the client application right after startup.</CAPTION>
@@ -62,31 +62,31 @@ Screenshot of the client application right after startup.</CAPTION>
 <DIV ALIGN="CENTER">
 
 </DIV><IMG
-  WIDTH="1728" HEIGHT="972" ALIGN="BOTTOM" BORDER="0"
- SRC="./startup.png"
- ALT="Image startup"></TD></TR>
+ WIDTH="556" HEIGHT="312" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="\includegraphics[width=\textwidth]{img/mgx/startup}"></TD></TR>
 </TABLE>
 </DIV>
 
 <P>
 After installation, the MGX application is already preconfigured to connect to the 
-MGX server instance hosted at CeBiTec, Bielefeld University. In case a different MGX server
+MGX server instance hosted at Justus Liebig University Giessen (JLU). In case a different MGX server
 should be used, the default server can be changed choosing Tools <SPAN CLASS="MATH"><IMG
- WIDTH="21" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img2.png"
+ WIDTH="22" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
  ALT="$\rightarrow$"></SPAN> Options from the menu
-and navigating to the MGX server tab (<A HREF="#config-site">2.2</A>). While the site name can be freely
+and navigating to the MGX server tab (Fig. <A HREF="#config-site">2.2</A>). While the site name can be freely
 chosen by the user, the server URL has to be entered as provided by the site administrators.
 
 <P>
 
-<DIV ALIGN="CENTER"><A NAME="config-site"></A><A NAME="178"></A>
+<DIV ALIGN="CENTER"><A NAME="config-site"></A><A NAME="172"></A>
 <TABLE>
 <CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.2:</STRONG>
 A different default server instance can optionally be configured in the MGX 
 server tab, which is available from the Tools <SPAN CLASS="MATH"><IMG
- WIDTH="21" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img2.png"
+ WIDTH="22" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
  ALT="$\rightarrow$"></SPAN> Options menu.</CAPTION>
 <TR><TD>
 <DIV ALIGN="CENTER">
@@ -100,7 +100,7 @@ server tab, which is available from the Tools <SPAN CLASS="MATH"><IMG
 
 <P>
 
-<DIV ALIGN="CENTER"><A NAME="login-screen"></A><A NAME="183"></A>
+<DIV ALIGN="CENTER"><A NAME="login-screen"></A><A NAME="177"></A>
 <TABLE>
 <CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.3:</STRONG>
 The first button in the menu toolbar will bring up the login dialog, allowing to connect to the configured server; the login screen also reflects the name of the current server.</CAPTION>
@@ -118,14 +118,15 @@ The first button in the menu toolbar will bring up the login dialog, allowing to
 All communication between the MGX user interface and the MGX server is encrypted using
 the standardized SSL (Secure Sockets Layer) protocol, ensuring confidentiality of 
 unpublished data and protecting the integrity of login credentials.
-After successfully logging in, a new window is automatically opened. The MGX Explorer window
+After successfully logging in, the Project Overview window
 lists all available projects a user is allowed to access, including both public as well as
-private projects. Projects are easily opened or closed by simply expanding the corresponding
-nodes in the Project Explorer window (<A HREF="#projects">2.4</A>).
+private projects. For each project, the role of the current user is given in brackets.
+Projects are easily opened or closed by simply expanding the corresponding
+nodes in the Project Explorer window (Fig.&nbsp;<A HREF="#projects">2.4</A>).
 <BR>
 <P>
 
-<DIV ALIGN="CENTER"><A NAME="projects"></A><A NAME="189"></A>
+<DIV ALIGN="CENTER"><A NAME="projects"></A><A NAME="183"></A>
 <TABLE>
 <CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.4:</STRONG>
 After successful login, the Project Explorer component will automatically open,
@@ -143,55 +144,56 @@ showing a list of MGX projects available to the current user. Shown is just one 
 
 <P>
 
-<DIV ALIGN="CENTER"><A NAME="structure"></A><A NAME="194"></A>
+<DIV ALIGN="CENTER"><A NAME="structure"></A><A NAME="188"></A>
 <TABLE>
 <CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.5:</STRONG>
-Divided into three different parts, a MGX projects offers
+Divided into four different sections, a MGX projects offers
 (from top to bottom) dedicated storage for files to be used by analysis pipelines, 
 managed reference sequences (including annotation data, if available) and general
-project data containing metadata as well as sequence datasets.</CAPTION>
+project data containing metadata as well as sequence datasets. An additional section
+provides access to metagenome and metatranscriptome assemblies.</CAPTION>
 <TR><TD>
 <DIV ALIGN="CENTER">
 
 </DIV><IMG
-  WIDTH="194" HEIGHT="74" ALIGN="BOTTOM" BORDER="0"
- SRC="./projstructure.png"
- ALT="Image projstructure"></TD></TR>
+ WIDTH="209" HEIGHT="85" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.png"
+ ALT="\includegraphics[width=.4\textwidth]{img/mgx/projstructure}"></TD></TR>
 </TABLE>
 </DIV>
 
 <P>
-Each project contains metagenome datasets as well as structured storage (<A HREF="#structure">2.5</A>), where user-provided
-databases can be uploaded to be used in custom analysis pipelines (Chapter <A HREF="node30.html#custom">3</A>).
+Each project contains metagenome datasets as well as structured storage (Fig.&nbsp;<A HREF="#structure">2.5</A>), where user-provided
+databases can be uploaded to be used in custom analysis pipelines (Chapter <A HREF="node31.html#custom">3</A>).
 
 <P>
 
 <DIV CLASS="navigation"><HR>
 <!--Navigation Panel-->
-<A NAME="tex2html320"
+<A NAME="tex2html321"
   HREF="node15.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html316"
+<A NAME="tex2html317"
   HREF="node9.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html310"
+<A NAME="tex2html311"
   HREF="node13.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html318"
+<A NAME="tex2html319"
   HREF="node1.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
 <BR>
-<B> Next:</B> <A NAME="tex2html321"
+<B> Next:</B> <A NAME="tex2html322"
   HREF="node15.html">Creating a new habitat</A>
-<B> Up:</B> <A NAME="tex2html317"
+<B> Up:</B> <A NAME="tex2html318"
   HREF="node9.html">Using the MGX application</A>
-<B> Previous:</B> <A NAME="tex2html311"
+<B> Previous:</B> <A NAME="tex2html312"
   HREF="node13.html">Metadata</A>
- &nbsp; <B>  <A NAME="tex2html319"
+ &nbsp; <B>  <A NAME="tex2html320"
   HREF="node1.html">Contents</A></B> </DIV>
 <!--End of Navigation Panel-->
 <ADDRESS>
-Sebastian Jaenicke, 2020-04-28
+Sebastian Jaenicke, 2024-02-18
 </ADDRESS>
 </BODY>
 </HTML>

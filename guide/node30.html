@@ -3,8 +3,8 @@
 <!--Converted with LaTeX2HTML 2018 (Released Feb 1, 2018) -->
 <HTML>
 <HEAD>
-<TITLE>Implementing custom analysis pipelines</TITLE>
-<META NAME="description" CONTENT="Implementing custom analysis pipelines">
+<TITLE>Search</TITLE>
+<META NAME="description" CONTENT="Search">
 <META NAME="keywords" CONTENT="main">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -14,128 +14,83 @@
 
 <LINK REL="STYLESHEET" HREF="main.css">
 
-<LINK REL="next" HREF="node35.html">
-<LINK REL="previous" HREF="node9.html">
-<LINK REL="up" HREF="main.html">
+<LINK REL="previous" HREF="node27.html">
+<LINK REL="up" HREF="node9.html">
 <LINK REL="next" HREF="node31.html">
 </HEAD>
 
 <BODY >
 
 <DIV CLASS="navigation"><!--Navigation Panel-->
-<A NAME="tex2html510"
+<A NAME="tex2html511"
   HREF="node31.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html506"
-  HREF="main.html">
+<A NAME="tex2html507"
+  HREF="node9.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html500"
+<A NAME="tex2html503"
   HREF="node29.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html508"
+<A NAME="tex2html509"
   HREF="node1.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
 <BR>
-<B> Next:</B> <A NAME="tex2html511"
-  HREF="node31.html">Getting started</A>
-<B> Up:</B> <A NAME="tex2html507"
-  HREF="main.html">MGX User Guide</A>
-<B> Previous:</B> <A NAME="tex2html501"
-  HREF="node29.html">Search</A>
- &nbsp; <B>  <A NAME="tex2html509"
+<B> Next:</B> <A NAME="tex2html512"
+  HREF="node31.html">Implementing custom analysis pipelines</A>
+<B> Up:</B> <A NAME="tex2html508"
+  HREF="node9.html">Using the MGX application</A>
+<B> Previous:</B> <A NAME="tex2html504"
+  HREF="node29.html">Displaying reference mappings</A>
+ &nbsp; <B>  <A NAME="tex2html510"
   HREF="node1.html">Contents</A></B> 
 <BR>
 <BR></DIV>
 <!--End of Navigation Panel-->
 
-<H1><A NAME="SECTION00400000000000000000"></A>
-<A NAME="custom"></A>
-<BR>
-Implementing custom analysis pipelines
+<H1><A NAME="SECTION003130000000000000000">
+Search</A>
 </H1>
 
 <P>
-All offered analysis tools provided by the MGX platform are implemented as workflows
-for the Conveyor [<A
- HREF="node35.html#CONVEYOR">Linke et&nbsp;al., 2011</A>] workflow engine developed by B. Linke. Within Conveyor,
-tools are provided as so-called &rdquo;nodes&rdquo;, which resemble individual processing steps
-and which are used to implement novel analysis methods by simply arranging and connecting
-them into a larger workflow. Conveyor currently includes plugins providing typical
-bioinformatics tools like BLAST or HMMer, but has recently been extended with dedicated
-plugins aimed at metagenome analysis, like MetaCV, MetaPhyler or MetaPhlAn, which all
-perform taxonomic analysis.
-A dedicated Conveyor plugin provides access to MGX data structures, thereby enabling the
-analysis of metagenomes stored in the MGX system with processing tools provided by Conveyor
-itself.
-While workflow definitions are stored in a XML-based format, a graphical user interface,
-the Conveyor Designer (<A HREF="#designer">3.1</A>), enables users to implement new analysis by simply
-placing and connecting nodes.
 
-<P>
-
-<DIV ALIGN="CENTER"><A NAME="designer"></A><A NAME="735"></A>
+<DIV ALIGN="CENTER"><A NAME="search1"></A><A NAME="392"></A>
 <TABLE>
-<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.1:</STRONG>
-The Conveyor Designer application allows easy and user-friendly
-development of custom analysis algorithms in a graphical way.</CAPTION>
-<TR><TD><IMG
-  WIDTH="1558" HEIGHT="1036" ALIGN="BOTTOM" BORDER="0"
- SRC="./designer.png"
- ALT="Image designer"></TD></TR>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.34:</STRONG>
+Icon for the metagenome search component.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><IMG
+  WIDTH="313" HEIGHT="289" ALIGN="BOTTOM" BORDER="0"
+ SRC="./SearchOpen.png"
+ ALT="Image SearchOpen"></TD></TR>
 </TABLE>
 </DIV>
 
 <P>
-As Conveyor is actively developed and new tools are continously integrated, giving a thorough
-introduction to Conveyor is beyond the scope of this document. The most up-to-date documentation describing
-Conveyor itself and the Conveyor Designer in particular can be found at the Conveyor web
-site <TT><A NAME="tex2html41"
-  HREF="http://www.uni-giessen.de/fbz/fb08/Inst/bioinformatik/software/Conveyor">http://www.uni-giessen.de/fbz/fb08/Inst/bioinformatik/software/Conveyor</A></TT>. 
+
+<DIV ALIGN="CENTER"><A NAME="search2"></A><A NAME="397"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.35:</STRONG>
+Search component showing results for the term &ldquo;polymeras&rdquo;. The search was performed
+within the select metagenomes simHC and simLC (top left); the bottom part shows an individual sequence identified
+by the search. Search results are displayed together with all other attributes available for a sequences, thus allowing
+to identify co-occurence of results.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><IMG
+  WIDTH="1364" HEIGHT="657" ALIGN="BOTTOM" BORDER="0"
+ SRC="./SearchTC.png"
+ ALT="Image SearchTC"></TD></TR>
+</TABLE>
+</DIV>
+
 
 <P>
 <BR><HR>
-<!--Table of Child-Links-->
-<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
-
-<UL CLASS="ChildLinks">
-<LI><A NAME="tex2html512"
-  HREF="node31.html">Getting started</A>
-<LI><A NAME="tex2html513"
-  HREF="node32.html">Workflow requirements</A>
-<LI><A NAME="tex2html514"
-  HREF="node33.html">Annotating metagenome sequences</A>
-<UL>
-<LI><A NAME="tex2html515"
-  HREF="node34.html">Creating hierarchical attributes</A>
-</UL></UL>
-<!--End of Table of Child-Links-->
-
-<DIV CLASS="navigation"><HR>
-<!--Navigation Panel-->
-<A NAME="tex2html510"
-  HREF="node31.html">
-<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html506"
-  HREF="main.html">
-<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html500"
-  HREF="node29.html">
-<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html508"
-  HREF="node1.html">
-<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
-<BR>
-<B> Next:</B> <A NAME="tex2html511"
-  HREF="node31.html">Getting started</A>
-<B> Up:</B> <A NAME="tex2html507"
-  HREF="main.html">MGX User Guide</A>
-<B> Previous:</B> <A NAME="tex2html501"
-  HREF="node29.html">Search</A>
- &nbsp; <B>  <A NAME="tex2html509"
-  HREF="node1.html">Contents</A></B> </DIV>
-<!--End of Navigation Panel-->
 <ADDRESS>
-Sebastian Jaenicke, 2020-04-28
+Sebastian Jaenicke, 2024-02-18
 </ADDRESS>
 </BODY>
 </HTML>

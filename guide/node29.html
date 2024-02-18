@@ -3,8 +3,8 @@
 <!--Converted with LaTeX2HTML 2018 (Released Feb 1, 2018) -->
 <HTML>
 <HEAD>
-<TITLE>Search</TITLE>
-<META NAME="description" CONTENT="Search">
+<TITLE>Displaying reference mappings</TITLE>
+<META NAME="description" CONTENT="Displaying reference mappings">
 <META NAME="keywords" CONTENT="main">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -14,83 +14,123 @@
 
 <LINK REL="STYLESHEET" HREF="main.css">
 
-<LINK REL="previous" HREF="node26.html">
-<LINK REL="up" HREF="node9.html">
+<LINK REL="previous" HREF="node28.html">
+<LINK REL="up" HREF="node27.html">
 <LINK REL="next" HREF="node30.html">
 </HEAD>
 
 <BODY >
 
 <DIV CLASS="navigation"><!--Navigation Panel-->
-<A NAME="tex2html498"
+<A NAME="tex2html501"
   HREF="node30.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html494"
-  HREF="node9.html">
+<A NAME="tex2html497"
+  HREF="node27.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html490"
+<A NAME="tex2html493"
   HREF="node28.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html496"
+<A NAME="tex2html499"
   HREF="node1.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
 <BR>
-<B> Next:</B> <A NAME="tex2html499"
-  HREF="node30.html">Implementing custom analysis pipelines</A>
-<B> Up:</B> <A NAME="tex2html495"
-  HREF="node9.html">Using the MGX application</A>
-<B> Previous:</B> <A NAME="tex2html491"
-  HREF="node28.html">Displaying reference mappings</A>
- &nbsp; <B>  <A NAME="tex2html497"
+<B> Next:</B> <A NAME="tex2html502"
+  HREF="node30.html">Search</A>
+<B> Up:</B> <A NAME="tex2html498"
+  HREF="node27.html">Reference mapping</A>
+<B> Previous:</B> <A NAME="tex2html494"
+  HREF="node28.html">Importing reference genomes</A>
+ &nbsp; <B>  <A NAME="tex2html500"
   HREF="node1.html">Contents</A></B> 
 <BR>
 <BR></DIV>
 <!--End of Navigation Panel-->
 
-<H1><A NAME="SECTION003120000000000000000">
-Search</A>
-</H1>
+<H2><A NAME="SECTION003122000000000000000">
+Displaying reference mappings</A>
+</H2>
 
 <P>
 
-<DIV ALIGN="CENTER"><A NAME="search1"></A><A NAME="396"></A>
+<DIV ALIGN="CENTER"><A NAME="refmap"></A><A NAME="378"></A>
 <TABLE>
-<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.34:</STRONG>
-Icon for the metagenome search component.</CAPTION>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.32:</STRONG>
+The reference mapping component showing alignment results for a metatranscriptome dataset mapped to the reference genome of one of the dominant organisms. From top to bottom, the component displays a) navigation and coverage histogram, b) currently selected interval and c) aligned DNA sequences for the interval. Color coding refers to relative sequence identity.</CAPTION>
 <TR><TD>
 <DIV ALIGN="CENTER">
 
 </DIV><IMG
-  WIDTH="313" HEIGHT="289" ALIGN="BOTTOM" BORDER="0"
- SRC="./SearchOpen.png"
- ALT="Image SearchOpen"></TD></TR>
+  WIDTH="1077" HEIGHT="925" ALIGN="BOTTOM" BORDER="0"
+ SRC="./RefMapping.png"
+ ALT="Image RefMapping"></TD></TR>
 </TABLE>
 </DIV>
 
 <P>
 
-<DIV ALIGN="CENTER"><A NAME="search2"></A><A NAME="401"></A>
+<DIV ALIGN="CENTER"><A NAME="fragrec"></A><A NAME="403"></A>
 <TABLE>
-<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.35:</STRONG>
-Search component showing results for the term &ldquo;polymeras&rdquo;. The search was performed
-within the select metagenomes simHC and simLC (top left); the bottom part shows an individual sequence identified
-by the search. Search results are displayed together with all other attributes available for a sequences, thus allowing
-to identify co-occurence of results.</CAPTION>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.33:</STRONG>
+An alternate visualization mode is the generation of fragment recruitment plots, here showing the
+same data as described previously (<A HREF="#refmap">2.32</A>). The view mode features the fragment recruitment plot itself and additionally
+provides stacked bars summarizing mapping identity within reference intervals, grouped into low (red), medium (yellow, <SPAN CLASS="MATH"><IMG
+ WIDTH="18" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$\ge$"></SPAN> 75%) and
+high (green, <SPAN CLASS="MATH"><IMG
+ WIDTH="18" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$\ge$"></SPAN> 97%) quality mappings.</CAPTION>
 <TR><TD>
 <DIV ALIGN="CENTER">
 
 </DIV><IMG
-  WIDTH="1364" HEIGHT="657" ALIGN="BOTTOM" BORDER="0"
- SRC="./SearchTC.png"
- ALT="Image SearchTC"></TD></TR>
+  WIDTH="1372" HEIGHT="967" ALIGN="BOTTOM" BORDER="0"
+ SRC="./FragRecruitment.png"
+ ALT="Image FragRecruitment"></TD></TR>
 </TABLE>
 </DIV>
 
+<P>
+Alignment of metagenome or metatranscriptome data to reference sequences of known origin allows researchers to evaluate
+relative identity between metagenome sequences and the actual strain or to obtain an overview of gene expression within
+a meta-transcriptome. MGX currently provides predefined pipelines employing BLAST [<A
+ HREF="node36.html#BLAST">Altschul et&nbsp;al., 1990</A>], FR-HIT [<A
+ HREF="node36.html#FRHIT">Niu et&nbsp;al., 2011</A>] and Bowtie 2 [<A
+ HREF="node36.html#BOWTIE">Langmead and Salzberg, 2012</A>].
+The reference mapping component is provided to inspect and browse alignment results, offering both a generic alignment view
+where each mapped sequence is colored according to mapping identity, as well as a fragment recruitment view. Switching between
+view modes is possible from the context menu of the mapping component.
 
 <P>
-<BR><HR>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html501"
+  HREF="node30.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html497"
+  HREF="node27.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html493"
+  HREF="node28.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html499"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html502"
+  HREF="node30.html">Search</A>
+<B> Up:</B> <A NAME="tex2html498"
+  HREF="node27.html">Reference mapping</A>
+<B> Previous:</B> <A NAME="tex2html494"
+  HREF="node28.html">Importing reference genomes</A>
+ &nbsp; <B>  <A NAME="tex2html500"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
 <ADDRESS>
-Sebastian Jaenicke, 2020-04-28
+Sebastian Jaenicke, 2024-02-18
 </ADDRESS>
 </BODY>
 </HTML>

@@ -3,8 +3,8 @@
 <!--Converted with LaTeX2HTML 2018 (Released Feb 1, 2018) -->
 <HTML>
 <HEAD>
-<TITLE>Visualization of results</TITLE>
-<META NAME="description" CONTENT="Visualization of results">
+<TITLE>Assembling a metagenome or metatranscriptome</TITLE>
+<META NAME="description" CONTENT="Assembling a metagenome or metatranscriptome">
 <META NAME="keywords" CONTENT="main">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -14,7 +14,7 @@
 
 <LINK REL="STYLESHEET" HREF="main.css">
 
-<LINK REL="next" HREF="node25.html">
+<LINK REL="next" HREF="node23.html">
 <LINK REL="previous" HREF="node19.html">
 <LINK REL="up" HREF="node9.html">
 <LINK REL="next" HREF="node23.html">
@@ -23,167 +23,54 @@
 <BODY >
 
 <DIV CLASS="navigation"><!--Navigation Panel-->
-<A NAME="tex2html416"
+<A NAME="tex2html417"
   HREF="node23.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html412"
+<A NAME="tex2html413"
   HREF="node9.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html406"
+<A NAME="tex2html407"
   HREF="node21.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html414"
+<A NAME="tex2html415"
   HREF="node1.html">
 <IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
 <BR>
-<B> Next:</B> <A NAME="tex2html417"
-  HREF="node23.html">Exporting sequences</A>
-<B> Up:</B> <A NAME="tex2html413"
+<B> Next:</B> <A NAME="tex2html418"
+  HREF="node23.html">Visualization of results</A>
+<B> Up:</B> <A NAME="tex2html414"
   HREF="node9.html">Using the MGX application</A>
-<B> Previous:</B> <A NAME="tex2html407"
+<B> Previous:</B> <A NAME="tex2html408"
   HREF="node21.html">Monitoring job progress</A>
- &nbsp; <B>  <A NAME="tex2html415"
+ &nbsp; <B>  <A NAME="tex2html416"
   HREF="node1.html">Contents</A></B> 
 <BR>
 <BR></DIV>
 <!--End of Navigation Panel-->
 
 <H1><A NAME="SECTION00390000000000000000">
-Visualization of results</A>
+Assembling a metagenome or metatranscriptome</A>
 </H1>
 
 <P>
-
-<DIV ALIGN="CENTER"><A NAME="viz1"></A><A NAME="324"></A>
-<TABLE>
-<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.24:</STRONG>
-Icon for the visualization module.</CAPTION>
-<TR><TD>
-<DIV ALIGN="CENTER">
-
-</DIV><IMG
-  WIDTH="313" HEIGHT="289" ALIGN="BOTTOM" BORDER="0"
- SRC="./VizOpen.png"
- ALT="Image VizOpen"></TD></TR>
-</TABLE>
-</DIV>
-
-<P>
-
-<DIV ALIGN="CENTER"><A NAME="viz2"></A><A NAME="329"></A>
-<TABLE>
-<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.25:</STRONG>
-Components of the visualization module. The bottom window is
-used to create and define groups, while the top window allows to select result and visualization
-type, customize options and display the final chart.</CAPTION>
-<TR><TD>
-<DIV ALIGN="CENTER">
-
-</DIV><IMG
-  WIDTH="1034" HEIGHT="924" ALIGN="BOTTOM" BORDER="0"
- SRC="./VizComponent.png"
- ALT="Image VizComponent"></TD></TR>
-</TABLE>
-</DIV>
-
-<P>
-The visualization component actually consists of two separate windows (<A HREF="#viz2">2.25</A>). The Group
-Window is located at the bottom and used to create, name and define groups used for data display.
-Sequencing runs can be added to individual groups using <SPAN  CLASS="textit">Drag and Drop</SPAN>. While any
-sequencing run can be present in several groups at the same time, it is not possible to add
-it to a group more than once. Groups may be assigned a name, their display color can be chosen
-by the user, and they may be temporarily excluded from display.
+Since MGX 2.0, we support the assembly and analysis of both metagenomes and metatranscriptomes; for this, we
+provide workflows targeting QC, (co-)assembly, gene prediction, taxonomic binning, completeness assessment, and
+abundance quantification. For metatranscriptomes, an additional step is implemented for the removal of ribosomal
+RNA sequences prior to the assembly, and binning is not performed.
 <BR>
-The main visualization window is shown at the top; once sequencing runs are added or changed, 
-the type of analysis result to be shown can be chosen on the top right. Afterwards, the desired
-visualization type is selected and may be customized, as well.
-
 <P>
-
-<DIV ALIGN="CENTER"><A NAME="viz3"></A><A NAME="336"></A>
-<TABLE>
-<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.26:</STRONG>
-Visualization example displaying a bar chart for two groups.</CAPTION>
-<TR><TD>
-<DIV ALIGN="CENTER">
-
-</DIV><IMG
-  WIDTH="1038" HEIGHT="920" ALIGN="BOTTOM" BORDER="0"
- SRC="./VizDemo.png"
- ALT="Image VizDemo"></TD></TR>
-</TABLE>
-</DIV>
-
+To create an assembly, select all sequencing runs that should be co-assembled within the Project Explorer window
+and select the &ldquo;Assemble&rdquo; entry from the context menu. Single-end data can be included into this process, but
+the corresponding workflows require that at least one paired-end dataset is provided, as this yields better assembly
+results. Also, only paired-end data is used for the taxonomic binning step, and we recommend to co-assemble multiple 
+paired-end datasets for an improved binning outcome.
+<BR>
 <P>
-Figure <A HREF="#viz3">2.26</A> shows a simple visualization example. Two groups were defined containing the simLC and simMC metagenomes
-in the first and the simHC metagenome in the second group. The main visualization window shows a bar chart
-generated for these groups based on assigned EC numbers. To account for differences in dataset size, both
-groups are normalized to fractions.
-
-<P>
-
-<DIV ALIGN="CENTER"><A NAME="viz4"></A><A NAME="405"></A>
-<TABLE>
-<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.27:</STRONG>
-In case a result is provided by more than one job, e.g. different taxonomic assignment methods,
-a dialog allows to select between jobs. In this example, taxonomic assignments are provided by MGX pipelines employing Kraken [<A
- HREF="node35.html#KRAKEN">Wood and Salzberg, 2014</A>]
-as well as MetaCV [<A
- HREF="node35.html#METACV">Liu et&nbsp;al., 2012</A>].</CAPTION>
-<TR><TD>
-<DIV ALIGN="CENTER">
-
-</DIV><IMG
-  WIDTH="623" HEIGHT="513" ALIGN="BOTTOM" BORDER="0"
- SRC="./ConflictResolver.png"
- ALT="Image ConflictResolver"></TD></TR>
-</TABLE>
-</DIV>
-
-<P>
-Whenever a selected result type is provided by more than one analysis job, an interactive dialog allows the user to
-review possible jobs and select one (<A HREF="#viz4">2.27</A>). This scenario will occur when a tool is executed several 
-times with different parameters, or when different taxonomic classifiers were used to analyse a dataset.
-
-<P>
+The assembly wizard requires to specify a name for the new assembly, and once the assembly workflow has been
+submitted, its state can be monitored from the Job Monitor (see above).
 <BR><HR>
-<!--Table of Child-Links-->
-<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
-
-<UL CLASS="ChildLinks">
-<LI><A NAME="tex2html418"
-  HREF="node23.html">Exporting sequences</A>
-<LI><A NAME="tex2html419"
-  HREF="node24.html">Biodiversity indices</A>
-</UL>
-<!--End of Table of Child-Links-->
-
-<DIV CLASS="navigation"><HR>
-<!--Navigation Panel-->
-<A NAME="tex2html416"
-  HREF="node23.html">
-<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html412"
-  HREF="node9.html">
-<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html406"
-  HREF="node21.html">
-<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
-<A NAME="tex2html414"
-  HREF="node1.html">
-<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
-<BR>
-<B> Next:</B> <A NAME="tex2html417"
-  HREF="node23.html">Exporting sequences</A>
-<B> Up:</B> <A NAME="tex2html413"
-  HREF="node9.html">Using the MGX application</A>
-<B> Previous:</B> <A NAME="tex2html407"
-  HREF="node21.html">Monitoring job progress</A>
- &nbsp; <B>  <A NAME="tex2html415"
-  HREF="node1.html">Contents</A></B> </DIV>
-<!--End of Navigation Panel-->
 <ADDRESS>
-Sebastian Jaenicke, 2020-04-28
+Sebastian Jaenicke, 2024-02-18
 </ADDRESS>
 </BODY>
 </HTML>
