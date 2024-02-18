@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  update-userguid:
+  update-userguide:
 
     permissions:
       contents: write
