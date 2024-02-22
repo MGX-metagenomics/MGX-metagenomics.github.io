@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Analysis - MGX metagenome analysis platform</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" href="//localhost:1313/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    <li class="menu-item-home">
+      <a href="/">
+        <span>Home</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-documentation">
+      <a href="/docs/">
+        <span>Documentation</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-about">
+      <a href="/docs/about">
+        <span>About</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-download">
+      <a href="https://github.com/MGX-metagenomics/MGX-gui/releases/tag/v20240109">
+        <span>Download</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="//localhost:1313/"><img width="70" height="70" alt="Logo" src="/images/mgx_logo_crapola.svg" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="//localhost:1313/"><img  width="70" height="70" alt="Logo" src="/images/mgx_logo_crapola.svg" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    <li class="menu-item-home">
+      <a href="/">
+        <span>Home</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-documentation">
+      <a href="/docs/">
+        <span>Documentation</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-about">
+      <a href="/docs/about">
+        <span>About</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-download">
+      <a href="https://github.com/MGX-metagenomics/MGX-gui/releases/tag/v20240109">
+        <span>Download</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+    <div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+      <div class="row">
+        <div class="col-12 col-md-3 mb-3">
+          <div class="sidebar">
+            
+<div class="docs-menu">
+  <h4>Docs</h4>
+  <ul>
+    
+    <li class="">
+      <a href="//localhost:1313/docs/about/">About</a>
+    </li>
+    
+    <li class="">
+      <a href="//localhost:1313/docs/install-mgx/">Install MGX</a>
+    </li>
+    
+    <li class="">
+      <a href="//localhost:1313/docs/basics/">Basics</a>
+    </li>
+    
+    <li class="">
+      <a href="//localhost:1313/docs/projects/">Projects</a>
+    </li>
+    
+    <li class="active ">
+      <a href="//localhost:1313/docs/analysis/">Analysis</a>
+    </li>
+    
+    <li class="">
+      <a href="//localhost:1313/docs/assembly/">Assembly</a>
+    </li>
+    
+    <li class="">
+      <a href="//localhost:1313/docs/visualization/">Visualization</a>
+    </li>
+    
+    <li class="">
+      <a href="//localhost:1313/docs/costum_pipelines/">Costum Pipelines</a>
+    </li>
+    
+    <li class="">
+      <a href="//localhost:1313/docs/references/">References</a>
+    </li>
+    
+  </ul>
+</div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-9">
+          
+<h1 class="title">Analysis</h1>
+<div class="content ">
+  <details open>
+<summary><b>Table of contents</b></summary>  
+<p><a href="#quality-control">Quality</a><br>
+<a href="#quality-control">Selecting a analysis pipeline</a><br>
+<a href="#monitoring-job-progress">Job Monitoring</a></p>
+</details>
+<br>
+<h2 id="quality-control">Quality Control</h2>
+<center>
+<p><a href="images/screens/QCopen.png"><img src="/images/screens/QCopen.png"  height="350" width="350" /></a></p>
+</center>
+<p>Select a sequencing run object, the <code>Quality Control</code> component can be opened from its menubar icon (red circle).</p>
+<blockquote>
+<p>Quality control reports generated within MGX should be inspected before proceding with data analysis.</p>
+</blockquote>
+<p>MGX currently offers three types of QC reports:</p>
+<ul>
+<li>Distribution of GC content</li>
+<li>sequence length</li>
+<li>nucleotide distribution within the DNA sequences</li>
+</ul>
+<p>Those can be used to evaluate overall sequence data quality and check for possible signs of contamination.</p>
+<h3 id="examples">Examples</h3>
+<center>
+<p><a href="images/screens/img5.svg"><img src="/images/screens/img5.svg"  height="400" width="400" /></a></p>
+<p><strong>GC distribution</strong> of a public metagenome dataset (<em>SRR3569370</em>).</p>
+<p><a href="images/screens/img6.svg"><img src="/images/screens/img6.svg"  height="400" width="400" /></a></p>
+<p><strong>Nucleotide distribution</strong> of the public metagenome dataset (<em>SRR3569370</em>).<br>
+The chart displays the distribution of nucleotides within the first 100 bp.</p>
+<p><a href="images/screens/img7.svg"><img src="/images/screens/img7.svg"  height="400" width="400" /></a></p>
+<p><strong>Read length distribution</strong> of the public metagenome dataset (<em>SRR3569370</em>).<br>
+Here the sequencing data was imported without prior quality trimming.</p>
+</center>
+<br>
+<center>
+<figure>
+   <img src="/images/screens/img8.svg" width="200" height="228">
+   <img src="/images/screens/img9.svg" width="200" height="228">
+   <img src="/images/screens/img10.svg" width="200" height="228">
+   <figcaption><b>Nucleotide distribution examples</b></figcaption>
+</figure>
+</center>
+<p>Depending on the kind of sequence data, different patterns may emerge, which might or might not warrant any further action.</p>
+<p>While small amounts of <em>e.g.</em> adapter residue are sometimes encountered and might be considered acceptable, it is up to the individual researcher to check back with their sequencing provider and ask for adapter sequences to execute additional trimming.</p>
+<p><a href="#top">[Top]</a></p>
+<hr>
+<h2 id="selecting-an-analysis-pipeline">Selecting an analysis pipeline</h2>
+<center>
+<p><a href="images/screens/analysiswiz1.png"><img src="/images/screens/analysiswiz1.png"  height="450" width="450" /></a></p>
+</center>
+<p><strong>Step 1:</strong> Select analysis pipelines.</p>
+<blockquote>
+<p>Analysis pipelines can be selected from the corresponding MGX project itself, from the repository of public pipelines provided by the server, or, a custom workflow can be uploaded and executed.</p>
+</blockquote>
+<p>All analysis pipelines can be started from the context menu of the metagenome dataset to be analyzed, provided the user has been granted at least <code>User</code> level access. First, the user can choose the desired pipeline from the project itself, from the pipeline repository hosted on the MGX server, or upload an own pipeline implementation.</p>
+<p>Subsequently, analysis parameters can be reviewed and adapted before submitting an analysis.</p>
+<center>
+<p><a href="images/screens/analysiswiz2.png"><img src="/images/screens/analysiswiz2.png"  height="450" width="450" /></a></p>
+</center>
+<p><strong>Step 2:</strong> Inspect and adapt parameters for the selected pipeline. The actual number of steps depends on the number of parameters available for customization.</p>
+<center>
+<p><a href="images/screens/analysiswiz2.png"><img src="/images/screens/analysiswiz2.png"  height="450" width="450" /></a></p>
+</center>
+<p><strong>Step 3:</strong> Before execution, a final overview of all parameters is shown. Once confirmed, the pipeline is submitted and scheduled for execution on the MGX server.</p>
+<blockquote>
+<p>Here, the selected pipeline has only one single parameter.</p>
+</blockquote>
+<p><a href="#top">[Top]</a></p>
+<hr>
+<h2 id="monitoring-job-progress">Monitoring job progress</h2>
+<p>The <code>Job Monitor</code> component is provided to inspect the state of jobs present within a MGX project. It can be opened from the toolbar and will display the state of jobs scheduled for execution, currently running or already finished.</p>
+<center>
+<p><a href="images/screens/JobMonOpen.png"><img src="/images/screens/JobMonOpen.png"  height="350" width="350" /></a></p>
+</center>
+<p>The <code>Job Monitor</code> component can be opened using its icon in the toolbar.</p>
+<center>
+<p><a href="images/screens/JobMon.png"><img src="/images/screens/JobMon.png"  height="350" width="350" /></a></p>
+</center>
+<p>The <code>Job Monitor</code> provides an overview of job states. Depending on context, all jobs within a MGX project or only jobs for a single dataset will be displayed.</p>
+<p>In addition, it can also be used to delete jobs and corresponding analysis results when no longer needed. Depending on the selected item in the <code>Project Explorer</code>, the <code>Job Monitor</code> will by default display all jobs within a project; if a single sequencing run is selected, only jobs for this dataset will be shown.</p>
+<p><a href="#top">[Top]</a></p>
+
+</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          
+            
+<div class="social">
+    
+        <a href="https://github.com/MGX-metagenomics" target="blank"><img height="20" width="20" src="/images/social/github.svg" title="Github" alt="Github" /></a>
+    
+        <a href="https://twitter.com/zerostaticio" target="blank"><img height="20" width="20" src="/images/social/twitter.svg" title="Twitter" alt="Twitter" /></a>
+    
+</div>
+
+          
+          
+            <div class="copyright">MGX by <a class="MGX" href="https://github.com/MGX-metagenomics">MGX</a></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/scripts.js"></script>
+  
+
+  
+
+
+</body>
+
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Projects - MGX metagenome analysis platform</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" href="//localhost:1313/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    <li class="menu-item-home">
+      <a href="/">
+        <span>Home</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-documentation">
+      <a href="/docs/">
+        <span>Documentation</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-about">
+      <a href="/docs/about">
+        <span>About</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-download">
+      <a href="https://github.com/MGX-metagenomics/MGX-gui/releases/tag/v20240109">
+        <span>Download</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="//localhost:1313/"><img width="70" height="70" alt="Logo" src="/images/mgx_logo_crapola.svg" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="//localhost:1313/"><img  width="70" height="70" alt="Logo" src="/images/mgx_logo_crapola.svg" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    <li class="menu-item-home">
+      <a href="/">
+        <span>Home</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-documentation">
+      <a href="/docs/">
+        <span>Documentation</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-about">
+      <a href="/docs/about">
+        <span>About</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-download">
+      <a href="https://github.com/MGX-metagenomics/MGX-gui/releases/tag/v20240109">
+        <span>Download</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+    <div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+      <div class="row">
+        <div class="col-12 col-md-3 mb-3">
+          <div class="sidebar">
+            
+<div class="docs-menu">
+  <h4>Docs</h4>
+  <ul>
+    
+    <li class="">
+      <a href="//localhost:1313/docs/about/">About</a>
+    </li>
+    
+    <li class="">
+      <a href="//localhost:1313/docs/install-mgx/">Install MGX</a>
+    </li>
+    
+    <li class="">
+      <a href="//localhost:1313/docs/basics/">Basics</a>
+    </li>
+    
+    <li class="active ">
+      <a href="//localhost:1313/docs/projects/">Projects</a>
+    </li>
+    
+    <li class="">
+      <a href="//localhost:1313/docs/analysis/">Analysis</a>
+    </li>
+    
+    <li class="">
+      <a href="//localhost:1313/docs/assembly/">Assembly</a>
+    </li>
+    
+    <li class="">
+      <a href="//localhost:1313/docs/visualization/">Visualization</a>
+    </li>
+    
+    <li class="">
+      <a href="//localhost:1313/docs/costum_pipelines/">Costum Pipelines</a>
+    </li>
+    
+    <li class="">
+      <a href="//localhost:1313/docs/references/">References</a>
+    </li>
+    
+  </ul>
+</div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-9">
+          
+<h1 class="title">Projects</h1>
+<div class="content ">
+  <h2 id="creating-a-new-habitat">Creating a new habitat</h2>
+<p>New habitats are defined choosing <code>Add habitat</code>  from the context menu of the <code>Project Data</code> node. This will bring up a wizard allowing to select the corresponding geographical location as well as specifying a habitats name and biome type. In a second step, an optional description for this habitat may be entered, as well.</p>
+<center>
+<p><a href="images/screens/addhabitat.png"><img src="/images/screens/addhabitat.png"  width="300"/></a></p>
+</center>
+<p>A new habitat can be added selecting the appropriate entry from the context menu of the <code>Project Data</code> node.</p>
+<center>
+<p><a href="images/screens/habwizard.png"><img src="/images/screens/habwizard.png"  width="400"/></a></p>
+</center>
+<p>The habitat wizard allows to define new habitats specifying their location, name and biome type.</p>
+<br>
+<p><a href="#top">[Top]</a></p>
+<hr>
+<h2 id="creating-new-samples-and-dna-extracts">Creating new samples and DNA extracts</h2>
+<p>Samples and DNA extracts are created in the same way as habitats, except that samples are defined for habitats and DNA extracts are defined based on samples. Thus, the corresponding wizards are available from the context menu of the <code>Habitat</code> and <code>Sample</code> nodes, respectively.</p>
+<h4 id="creating-new-samples">Creating new samples</h4>
+<center>
+<p><a href="images/screens/samplewiz1.png"><img src="/images/screens/samplewiz1.png"  width="400"/></a></p>
+</center>
+<p><strong>Step 1:</strong>  Select sample date in sample wizard.</p>
+<center>
+<p><a href="images/screens/samplewiz2.png"><img src="/images/screens/samplewiz2.png"  width="400"/></a></p>
+</center>
+<p><strong>Step 2:</strong> Values for samples material,  temperature and  sampled volume/weight are required.</p>
+<h4 id="dna-extract">DNA extract</h4>
+<center>
+<p><a href="images/screens/extractwiz1.png"><img src="/images/screens/extractwiz1.png"  width="400"/></a></p>
+</center>
+<p><strong>Step 1:</strong> Specify the type of DNA extract (<em>metagenome, metatranscriptome, amplicon</em>) and used protocols for DNA extractions.</p>
+<center>
+<p><a href="images/screens/extractwiz2.png"><img src="/images/screens/extractwiz2.png"  width="400"/></a></p>
+</center>
+<p><strong>Step 2:</strong> If needed,  provide additional information.</p>
+<ul>
+<li>Amplicon: Primer names and corresponding target gene (fragment)</li>
+<li>Metatranscriptome: Select type of ribosomal RNA depletion methods</li>
+</ul>
+<p><a href="#top">[Top]</a></p>
+<hr>
+<h2 id="importing-sequence-data">Importing sequence data</h2>
+<p>Finally, sequence data can be imported into the MGX project by creating new <code>sequencing run</code> objects; using the corresponding wizard, a name and details about the sequencing methodology such as platform and strategy can be deposited. Depending on whether single-end or paired-end/mate-pair data was selected, the wizard subsequently allows to select one or two files.</p>
+<p>Give the large number of different sequencing adapters and barcoding schemes, MGX is unable to address all of them; hence, proper adapter removal, quality-based trimming (and filtering of <em>e.g.</em> host DNA should be performed before uploading datasets to MGX for analysis.</p>
+<center>
+<p><a href="images/screens/runwiz1.png"><img src="/images/screens/runwiz1.png"  width="400"/></a></p>
+</center>
+<p><strong>Step 1:</strong> Specify the employed sequencing platform and technology.</p>
+<blockquote>
+<p><strong>NOTE</strong><br>
+Data which is already submitted to or obtained from public <strong>INSDC</strong> repositories (<em>e.g.</em> <strong>NCBI</strong>, <strong>EBI</strong>, <strong>DDBJ</strong>), the corresponding <code>accession number</code> can be stored.</p>
+</blockquote>
+<center>
+<p><a href="images/screens/runwiz2.png"><img src="/images/screens/runwiz2.png"  width="400"/></a></p>
+</center>
+<p><strong>Step 2:</strong> Select file containing the sequence data.</p>
+<blockquote>
+<p><strong>MGX supports all commonly used file formats</strong></p>
+<ul>
+<li>FASTA</li>
+<li>FASTQ</li>
+<li>SFF</li>
+</ul>
+</blockquote>
+<p><a href="#top">[Top]</a></p>
+
+</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          
+            
+<div class="social">
+    
+        <a href="https://github.com/MGX-metagenomics" target="blank"><img height="20" width="20" src="/images/social/github.svg" title="Github" alt="Github" /></a>
+    
+        <a href="https://twitter.com/zerostaticio" target="blank"><img height="20" width="20" src="/images/social/twitter.svg" title="Twitter" alt="Twitter" /></a>
+    
+</div>
+
+          
+          
+            <div class="copyright">MGX by <a class="MGX" href="https://github.com/MGX-metagenomics">MGX</a></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/scripts.js"></script>
+  
+
+  
+
+
+</body>
+
+</html>

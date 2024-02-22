@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Basics - MGX metagenome analysis platform</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" href="//localhost:1313/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    <li class="menu-item-home">
+      <a href="/">
+        <span>Home</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-documentation">
+      <a href="/docs/">
+        <span>Documentation</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-about">
+      <a href="/docs/about">
+        <span>About</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-download">
+      <a href="https://github.com/MGX-metagenomics/MGX-gui/releases/tag/v20240109">
+        <span>Download</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="//localhost:1313/"><img width="70" height="70" alt="Logo" src="/images/mgx_logo_crapola.svg" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="//localhost:1313/"><img  width="70" height="70" alt="Logo" src="/images/mgx_logo_crapola.svg" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    <li class="menu-item-home">
+      <a href="/">
+        <span>Home</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-documentation">
+      <a href="/docs/">
+        <span>Documentation</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-about">
+      <a href="/docs/about">
+        <span>About</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-download">
+      <a href="https://github.com/MGX-metagenomics/MGX-gui/releases/tag/v20240109">
+        <span>Download</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+    <div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+      <div class="row">
+        <div class="col-12 col-md-3 mb-3">
+          <div class="sidebar">
+            
+<div class="docs-menu">
+  <h4>Docs</h4>
+  <ul>
+    
+    <li class="">
+      <a href="//localhost:1313/docs/about/">About</a>
+    </li>
+    
+    <li class="">
+      <a href="//localhost:1313/docs/install-mgx/">Install MGX</a>
+    </li>
+    
+    <li class="active ">
+      <a href="//localhost:1313/docs/basics/">Basics</a>
+    </li>
+    
+    <li class="">
+      <a href="//localhost:1313/docs/projects/">Projects</a>
+    </li>
+    
+    <li class="">
+      <a href="//localhost:1313/docs/analysis/">Analysis</a>
+    </li>
+    
+    <li class="">
+      <a href="//localhost:1313/docs/assembly/">Assembly</a>
+    </li>
+    
+    <li class="">
+      <a href="//localhost:1313/docs/visualization/">Visualization</a>
+    </li>
+    
+    <li class="">
+      <a href="//localhost:1313/docs/costum_pipelines/">Costum Pipelines</a>
+    </li>
+    
+    <li class="">
+      <a href="//localhost:1313/docs/references/">References</a>
+    </li>
+    
+  </ul>
+</div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-9">
+          
+<h1 class="title">Basics</h1>
+<div class="content ">
+  <details open>
+<summary><b>Table of contents</b></summary>  
+<p><a href="#obtaining-a-mgx-project">Obtaining a Project</a><br>
+<a href="#mgx-roles">MGX Roles</a><br>
+<a href="#metadata">Metadata</a><br>
+<a href="#connecting-to-a-mgx-server">Connecting to Server</a><br>
+<a href="#uploading-own-files">Uploading own files</a><br>
+<a href="#importing-reference-genomes">Importing reference genomes</a><br>
+<a href="#search">Search</a></p>
+</details>
+<br>
+<h2 id="obtaining-a-mgx-project">Obtaining a MGX project</h2>
+<p>Currently, there is no way to automatically create new MGX projects. If you would like to analyze your metagenome or metatranscriptome data with MGX, please send a mail to the MGX team, which can be contacted at:</p>
+<blockquote>
+<p><strong><a href="mailto:mgx@computational.bio.uni-giessen.de">mgx@computational.bio.uni-giessen.de</a></strong>.</p>
+</blockquote>
+<p>MGX projects and users are managed by the General Project Management System (GPMS) developed at CeBiTec (Bielefeld University), which provides Single Sign-On (SSO) for all our applications.</p>
+<p>To apply for a new project, please provide:</p>
+<blockquote>
+<ul>
+<li>a short <strong>project name</strong>, e.g. <em>MGX_AcidMine</em></li>
+<li>a <strong>one-line description</strong> of your project (<em>Acid Mine Drainage metagenome</em>)</li>
+<li>a <strong>contact address</strong> of a single person responsible for the project (PI or group leader) and the corresponding GPMS login name.</li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="mgx-roles">MGX Roles</h2>
+<p>MGX offers different access levels (<strong>roles</strong>), which are assigned individually for each project:</p>
+<br>
+<blockquote>
+<ul>
+<li><code>Admins</code> are equal to <code>Users</code>, but can request access to be granted to additional users.</li>
+<li><code>Users</code> have full access to a MGX project and are able to define new or modify present datasets, import new sequences and execute analysis jobs. They are also able to delete all data associated with a project.</li>
+<li><code>Guests</code> are provided read-only access to a project, i.e. they are able to access all information already present, view analysis results and export data; however, they are unable to perform new analysis or delete data from the project.</li>
+</ul>
+</blockquote>
+<p>For all MGX projects, the person requesting the project is automatically added as an <code>Admin</code>. As new users can always be added to an existing MGX project, all registered users are required to carefully protect their login credentials and not to share them with any third party.</p>
+<hr>
+<h2 id="metadata">Metadata</h2>
+<p>In addition to the sequence data, MGX requires a user to provide additional information about a dataset, e.g. further details about the investigated habitat as well as sampling and sequencing procedures. Metadata in the MGX platform is organized in a hierarchical manner describing</p>
+<blockquote>
+<ul>
+<li>the geographical location of a habitat</li>
+<li>the sample taken from a habitat</li>
+<li>the DNA extraction procedure</li>
+<li>sequencing technology and protocol</li>
+</ul>
+</blockquote>
+<p><a href="#top">[Top]</a></p>
+<hr>
+<h2 id="connecting-to-a-mgx-server">Connecting to a MGX server</h2>
+<center>
+<p><a href="images/screens/img2.svg"><img src="/images/screens/img2.svg"/></a></p>
+</center>
+<p>After installation, the MGX application is already preconfigured to connect to the MGX server instance hosted at Justus Liebig University Giessen (JLU). In case a different MGX server should be used, the default server can be changed choosing Tools → Options from the menu and navigating to the <code>MGX server tab</code>. While the site name can be freely chosen by the user, the <code>server URL</code> has to be entered as provided by the site administrators.</p>
+<center>
+<p><a href="images/screens/config-site.png"><img src="/images/screens/config-site.png"  height="400" width="500" /></a></p>
+</center>
+<p>A different default server instance can optionally be configured in the MGX server tab, which is available from the <code>Tools</code> →<code>Options</code> menu.</p>
+<center>
+<p><a href="images/screens/login.png"><img src="/images/screens/login.png"  height="300" width="400" /></a></p>
+</center>
+<p>The first button in the menu toolbar will bring up the login dialog, allowing to connect to the configured server; the login screen also reflects the name of the <code>current server</code>.</p>
+<p>All communication between the MGX user interface and the MGX server is encrypted using the standardized <strong>SSL (Secure Sockets Layer)</strong> protocol, ensuring confidentiality of unpublished data and protecting the integrity of login credentials.</p>
+<p>After successfully logging in, the Project Overview window lists all available <strong>projects</strong> a user is allowed to access, including both public as well as private projects. For each project, the role of the current user is given in brackets. Projects are easily opened or closed by simply expanding the corresponding nodes in the Project Explorer window.</p>
+<center>
+<p><a href="images/screens/projects.png"><img src="/images/screens/projects.png"  height="300" width="400" /></a></p>
+</center>
+<p>After successful login, the <code>Project Explorer</code> component will automatically open, showing a list of <code>MGX projects</code> available to the current user. Shown is just one project, <code>MGX_Demo</code>, with <code>User</code> access level indicated behind the project name.</p>
+<center>
+<p><a href="images/screens/img4.svg"><img src="/images/screens/img4.svg"  height="500" width="500" /></a></p>
+</center>
+<p>Divided into four different sections, a <code>MGX project</code> offers (<em>from top to bottom</em>) dedicated storage for files to be used by analysis pipelines, managed reference sequences (<em>including annotation data, if available</em>) and general project data containing metadata as well as sequence datasets. An additional section provides access to <strong>metagenome</strong> and <strong>metatranscriptome</strong> assemblies.</p>
+<p>Each project contains metagenome datasets as well as <strong>structured storage</strong>, where user-provided databases can be uploaded to be used in custom analysis pipelines.</p>
+<p><a href="#top">[Top]</a></p>
+<hr>
+<h2 id="uploading-own-files">Uploading own files</h2>
+<p>For each project, MGX provides dedicated storage to allow users to provide custom data, which can subsequently be used with analysis pipelines. Thus, <code>own sequence collections</code> or hidden Markov models <code>HMM model</code> files for genes of interest can easily be uploaded and later included in analysis pipelines.</p>
+<center>
+<p><a href="images/screens/serverfs.png"><img src="/images/screens/serverfs.png"  height="300" width="300" /></a></p>
+</center>
+<p>Each project includes flat storage where custom data can be stored, e.g., own <code>FASTA</code> files to be used as reference databases for metagenome analysis.</p>
+<p>While it may be necessary to implement your own pipeline depending on the desired kind of analysis, the MGX repository hosts predefined pipeline templates addressing the most common cases.</p>
+<p>The <code>BestHit-Blast</code> template can be used to annotate metagenome sequences with the description of a Blast hit after the user has uploaded a <code>FASTA</code> file containing amino acid sequences, and the <code>BestHit-HMM</code> template provides the same functionality for <code>HMMs</code>.</p>
+<p><a href="#top">[Top]</a></p>
+<hr>
+<h2 id="importing-reference-genomes">Importing reference genomes</h2>
+<p>MGX provides several analysis pipelines to align metagenome reads to reference genomes. Before these pipelines can be used, the <code>corresponding reference genome</code> has to be added to the project. There are <strong>two possible ways</strong> to achieve this:</p>
+<ul>
+<li>MGX repository hosts published reference sequences</li>
+<li>Annotated reference genomes obtained from the NCBI</li>
+</ul>
+<p>iIn addition, users may choose to upload a custom reference sequence in FASTA, GenBank, or EMBL format, e.g., a finished but unpublished genome not available from official sources.</p>
+<center>
+<p><a href="images/screens/addReference.png"><img src="/images/screens/addReference.png"  height="400" width="400" /></a></p>
+</center>
+<p><strong>Import:</strong>  Reference sequences for mapping targets may be imported from the global repository or uploaded in EMBL/GenBank/FASTA format.</p>
+<p><strong>To add a reference genome:</strong> right-click on the <code>Reference sequences</code> node within the project view and select either <code>Add reference</code> to access the MGX repository or <code>Upload EMBL/GenBank/FASTA reference</code> to provide your own sequence.</p>
+<p>Once the import is complete, the reference genome is available for analysis and can be selected for the corresponding analysis pipelines that provide reference mapping, e.g., <code>BowTie</code> or <code>FR-HIT</code>.</p>
+<p><a href="#top">[Top]</a></p>
+<hr>
+<h2 id="search">Search</h2>
+<p><strong>Search:</strong> Icon for the metagenome <code>Search</code> component.</p>
+<center>
+<p><a href="images/screens/SearchOpen.png"><img src="/images/screens/SearchOpen.png"  height="300" width="300" /></a></p>
+</center>
+<h3 id="example">Example</h3>
+<center>
+<p><a href="images/screens/SearchTC.png"><img src="/images/screens/SearchTC.png"  height="600" width="700" /></a></p>
+</center>
+<p><code>Search</code> component showing results for the term <strong>polymeras</strong>. The search was performed within the select metagenomes <em>simHC</em> and <em>simLC</em> (top left).</p>
+<p>The bottom part shows an individual sequence identified by the search. Search results are displayed together with all other attributes available for sequences, thus allowing the identification of the co-occurrence of results.</p>
+<p><a href="#top">[Top]</a></p>
+
+</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          
+            
+<div class="social">
+    
+        <a href="https://github.com/MGX-metagenomics" target="blank"><img height="20" width="20" src="/images/social/github.svg" title="Github" alt="Github" /></a>
+    
+        <a href="https://twitter.com/zerostaticio" target="blank"><img height="20" width="20" src="/images/social/twitter.svg" title="Twitter" alt="Twitter" /></a>
+    
+</div>
+
+          
+          
+            <div class="copyright">MGX by <a class="MGX" href="https://github.com/MGX-metagenomics">MGX</a></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/scripts.js"></script>
+  
+
+  
+
+
+</body>
+
+</html>

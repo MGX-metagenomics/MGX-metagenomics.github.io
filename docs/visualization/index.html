@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Visualization - MGX metagenome analysis platform</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" href="//localhost:1313/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    <li class="menu-item-home">
+      <a href="/">
+        <span>Home</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-documentation">
+      <a href="/docs/">
+        <span>Documentation</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-about">
+      <a href="/docs/about">
+        <span>About</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-download">
+      <a href="https://github.com/MGX-metagenomics/MGX-gui/releases/tag/v20240109">
+        <span>Download</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="//localhost:1313/"><img width="70" height="70" alt="Logo" src="/images/mgx_logo_crapola.svg" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="//localhost:1313/"><img  width="70" height="70" alt="Logo" src="/images/mgx_logo_crapola.svg" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    <li class="menu-item-home">
+      <a href="/">
+        <span>Home</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-documentation">
+      <a href="/docs/">
+        <span>Documentation</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-about">
+      <a href="/docs/about">
+        <span>About</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-download">
+      <a href="https://github.com/MGX-metagenomics/MGX-gui/releases/tag/v20240109">
+        <span>Download</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+    <div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+      <div class="row">
+        <div class="col-12 col-md-3 mb-3">
+          <div class="sidebar">
+            
+<div class="docs-menu">
+  <h4>Docs</h4>
+  <ul>
+    
+    <li class="">
+      <a href="//localhost:1313/docs/about/">About</a>
+    </li>
+    
+    <li class="">
+      <a href="//localhost:1313/docs/install-mgx/">Install MGX</a>
+    </li>
+    
+    <li class="">
+      <a href="//localhost:1313/docs/basics/">Basics</a>
+    </li>
+    
+    <li class="">
+      <a href="//localhost:1313/docs/projects/">Projects</a>
+    </li>
+    
+    <li class="">
+      <a href="//localhost:1313/docs/analysis/">Analysis</a>
+    </li>
+    
+    <li class="">
+      <a href="//localhost:1313/docs/assembly/">Assembly</a>
+    </li>
+    
+    <li class="active ">
+      <a href="//localhost:1313/docs/visualization/">Visualization</a>
+    </li>
+    
+    <li class="">
+      <a href="//localhost:1313/docs/costum_pipelines/">Costum Pipelines</a>
+    </li>
+    
+    <li class="">
+      <a href="//localhost:1313/docs/references/">References</a>
+    </li>
+    
+  </ul>
+</div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-9">
+          
+<h1 class="title">Visualization</h1>
+<div class="content ">
+  <details open>
+<summary><b>Table of contents</b></summary>  
+<p><a href="#result-visualization">Result visualization</a><br>
+<a href="#exporting-sequences">Exporting sequences</a><br>
+<a href="#biodiversity-indices">Biodiversity indices</a><br>
+<a href="#displaying-reference-mappings">Displaying reference mappings</a></p>
+</details>
+<br>
+<h2 id="result-visualization">Result visualization</h2>
+<p>The <code>Visualization</code> component actually consists of two separate windows. The <code>Group Window</code> is located at the bottom and used to create, name and define groups used for data display. Sequencing runs can be added to individual groups using <code>Drag and Drop</code>.</p>
+<p>While any sequencing run can be present in several groups simultaneously, it is <strong>impossible</strong> to add it to a group more than once. <code>Groups</code> may be assigned a name, the user can choose their display color, and they may be temporarily excluded from display.</p>
+<p>The main visualization window is shown at the top; once sequencing runs are added or changed, the type of analysis result can be chosen on the top right. Afterward, the desired visualization type is selected and may be customized.</p>
+<center>
+<p><a href="images/screens/VizOpen.png"><img src="/images/screens/VizOpen.png"/></a></p>
+</center>
+<p><strong>Start:</strong> Click Icon for the <code>Visualization</code> module.</p>
+<center>
+<p><a href="images/screens/VizComponent.png"><img src="/images/screens/VizComponent.png" width="600"/></a></p>
+</center>
+<p><strong>Composition of Visulization:</strong> Components of the <code>Visualization</code> module. The bottom window is used to create and define <code>groups</code>, while the top window allows to select <code>result</code> and <code>visualization</code> type, customize options and display the final chart.</p>
+<center>
+<p><a href="images/screens/VizDemo.png"><img src="/images/screens/VizDemo.png" width="600"/></a></p>
+</center>
+<p><strong>Visualization example:</strong> Displaying a bar chart for two groups.</p>
+<p>Two groups were defined containing the <em>simLC</em> and <em>simMC</em> metagenomes in the first and the <em>simHC</em> metagenome in the second group. The main visualization window shows a bar chart generated for these groups based on assigned <em>EC numbers</em>. To account for differences in dataset size, both groups are normalized to fractions.</p>
+<center>
+<p><a href="images/screens/ConflictResolver.png"><img src="/images/screens/ConflictResolver.png" width="600"/></a></p>
+</center>
+<p>In case a result is provided by multiple jobs, e.g., different taxonomic assignment methods, a dialog allows one to select between jobs. In this example, taxonomic assignments are supplied by MGX pipelines employing <code>Kraken</code>  <a href="/docs/references/">Wood and Salzberg, 2014</a> as well as <code>MetaCV</code> <a href="/docs/references/">Liu et al., 2012</a>.</p>
+<p>Whenever more than one analysis job provides a selected result type, an interactive dialog allows the user to review possible jobs and choose one.</p>
+<p>This scenario will occur when a tool is executed <strong>several times</strong> with different parameters or when <strong>different taxonomic classifiers</strong> are used to analyze a dataset.</p>
+<p><a href="#top">[Top]</a></p>
+<hr>
+<h2 id="exporting-sequences">Exporting sequences</h2>
+<p>Sequences can be exported for each group individually. The user can freely choose which attributes should be included.</p>
+<p>The <code>Sequence Export</code> wizard allows the export of sequences conditionally based on analysis results. For each visualization group, it is possible to choose the attributes for which sequences should be obtained. Sequences are downloaded from the <code>MGX server</code> and saved in <code>FASTA</code> format files for each group.</p>
+<center>
+<p><a href="images/screens/SeqExport.png"><img src="/images/screens/SeqExport.png" width="500"/></a></p>
+</center>
+<p><strong>Start:</strong> Click icon (red circle) at menu.</p>
+<p><a href="#top">[Top]</a></p>
+<hr>
+<h2 id="biodiversity-indices">Biodiversity indices</h2>
+<p>The <code>Visualization</code> module features another component used to display commonly used <code>biodiversity indices</code>, such as the <code>ACE</code>, <code>Shannon</code> <a href="/docs/references/">Spellerberg and Fedor, 2003</a>, <code>Chao1</code> <a href="/docs/references/">Hughes et al., 2002</a>, and <code>Simpson</code> <a href="/docs/references/">Simpson, 1949</a> indices. The component will automatically show the index values for the currently selected visualization group based on the chosen attribute type.</p>
+<center>
+<p><a href="images/screens/BioDiversity.png"><img src="/images/screens/BioDiversity.png" width="500"/></a></p>
+</center>
+<p><strong>Example:</strong> <code>Biodiversity indices</code> (<strong>bottom left</strong>) such as <code>ACE</code> or <code>Shannon</code> are computed for the currently selected visualization group.</p>
+<p><a href="#top">[Top]</a></p>
+<hr>
+<h2 id="displaying-reference-mappings">Displaying reference mappings</h2>
+<p>Aligning metagenome or metatranscriptome data to reference sequences of known origin allows researchers to evaluate the relative identity between metagenome sequences and the actual strain or to obtain an overview of gene expression within a metatranscriptome. MGX currently provides predefined pipelines employing <code>BLAST</code>  <a href="/docs/references/">Altschul et al., 1990</a>, <code>FR-HIT</code>  <a href="/docs/references/">Niu et al., 2011</a>, and <code>Bowtie 2</code>  <a href="/docs/references/">Langmead and Salzberg, 2012</a>.</p>
+<p>The reference <code>Mapping</code> component is provided to inspect and browse alignment results, offering both a generic alignment view where each mapped sequence is colored according to mapping identity as well as a fragment recruitment view. Switching between view modes is possible from the context menu of the <code>Mapping</code> component.</p>
+<center>
+<p><a href="images/screens/RefMapping.png"><img src="/images/screens/RefMapping.png" width="600"/></a></p>
+</center>
+<p>The reference mapping component shows alignment results for a metatranscriptome dataset mapped to the reference genome of one of the dominant organisms.</p>
+<p><strong>From top to bottom, the component displays:</strong></p>
+<ul>
+<li>Navigation and coverage histogram</li>
+<li>The currently selected interval</li>
+<li>Aligned DNA sequences for the interval</li>
+</ul>
+<blockquote>
+<p>Color coding refers to relative sequence identity.</p>
+</blockquote>
+<center>
+<p><a href="images/screens/FragRecruitment.png"><img src="/images/screens/FragRecruitment.png" width="600"/></a></p>
+</center>
+<p>An alternate visualization mode is the generation of fragment recruitment plots, showing the same data as above. The view mode features the fragment recruitment plot itself. Additionally, it provides stacked bars <code>summarizing mapping identity</code> within reference intervals, grouped into <code>low</code> (red), <code>medium</code> (yellow,  75%), and <code>high</code> (green,  97%) quality mappings.</p>
+<p><a href="#top">[Top]</a></p>
+
+</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          
+            
+<div class="social">
+    
+        <a href="https://github.com/MGX-metagenomics" target="blank"><img height="20" width="20" src="/images/social/github.svg" title="Github" alt="Github" /></a>
+    
+        <a href="https://twitter.com/zerostaticio" target="blank"><img height="20" width="20" src="/images/social/twitter.svg" title="Twitter" alt="Twitter" /></a>
+    
+</div>
+
+          
+          
+            <div class="copyright">MGX by <a class="MGX" href="https://github.com/MGX-metagenomics">MGX</a></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/scripts.js"></script>
+  
+
+  
+
+
+</body>
+
+</html>
