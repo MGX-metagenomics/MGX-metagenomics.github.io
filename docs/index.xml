@@ -58,10 +58,10 @@
       <description>Table of contents Result visualization&#xA;Exporting sequences&#xA;Biodiversity indices&#xA;Displaying reference mappings&#xA;Result visualization The Visualization component actually consists of two separate windows. The Group Window is located at the bottom and used to create, name and define groups used for data display. Sequencing runs can be added to individual groups using Drag and Drop.&#xA;While any sequencing run can be present in several groups simultaneously, it is impossible to add it to a group more than once.</description>
     </item>
     <item>
-      <title>Costum Pipelines</title>
-      <link>https://mgx-metagenomics.github.io/docs/costum_pipelines/</link>
+      <title>Custom Pipelines</title>
+      <link>https://mgx-metagenomics.github.io/docs/custom_pipelines/</link>
       <pubDate>Wed, 21 Feb 2024 13:22:16 +0100</pubDate>
-      <guid>https://mgx-metagenomics.github.io/docs/costum_pipelines/</guid>
+      <guid>https://mgx-metagenomics.github.io/docs/custom_pipelines/</guid>
       <description>Table of contents General&#xA;Getting started&#xA;Workflow requirements&#xA;Annotating metagenome sequences&#xA;Creating hierarchical attributes&#xA;General All offered analysis tools provided by the MGX platform are implemented as workflows for the Conveyor Linke et al.,2011 workflow engine developed by B. Linke. Within Conveyor, tools are provided as so-called nodes, which resemble individual processing steps and implement novel analysis methods by simply arranging and connecting them into a larger workflow.&#xA;Conveyor currently includes plugins providing typical bioinformatics tools like BLAST or HMMer but has recently been extended with dedicated plugins aimed at metagenome analysis, like MetaCV, MetaPhyler, or MetaPhlAn, which all perform taxonomic analysis.</description>
     </item>
     <item>

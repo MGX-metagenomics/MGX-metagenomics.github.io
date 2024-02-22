@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Custom Pipelines - MGX metagenome analysis platform</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" href="https://mgx-metagenomics.github.io/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/css/style.min.673d0458160597c92d4d9414ce4b7ed589d52c8c7cc87c0a988176b90e86de7f.css">
+  
+
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    <li class="menu-item-home">
+      <a href="/">
+        <span>Home</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-documentation">
+      <a href="/docs/">
+        <span>Documentation</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-about">
+      <a href="/docs/about">
+        <span>About</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-download">
+      <a href="https://github.com/MGX-metagenomics/MGX-gui/releases/tag/v20240109">
+        <span>Download</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="https://mgx-metagenomics.github.io/"><img width="70" height="70" alt="Logo" src="/images/mgx_logo_crapola.svg" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="https://mgx-metagenomics.github.io/"><img  width="70" height="70" alt="Logo" src="/images/mgx_logo_crapola.svg" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    <li class="menu-item-home">
+      <a href="/">
+        <span>Home</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-documentation">
+      <a href="/docs/">
+        <span>Documentation</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-about">
+      <a href="/docs/about">
+        <span>About</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-download">
+      <a href="https://github.com/MGX-metagenomics/MGX-gui/releases/tag/v20240109">
+        <span>Download</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+    <div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+      <div class="row">
+        <div class="col-12 col-md-3 mb-3">
+          <div class="sidebar">
+            
+<div class="docs-menu">
+  <h4>Docs</h4>
+  <ul>
+    
+    <li class="">
+      <a href="https://mgx-metagenomics.github.io/docs/about/">About</a>
+    </li>
+    
+    <li class="">
+      <a href="https://mgx-metagenomics.github.io/docs/install-mgx/">Install MGX</a>
+    </li>
+    
+    <li class="">
+      <a href="https://mgx-metagenomics.github.io/docs/basics/">Basics</a>
+    </li>
+    
+    <li class="">
+      <a href="https://mgx-metagenomics.github.io/docs/projects/">Projects</a>
+    </li>
+    
+    <li class="">
+      <a href="https://mgx-metagenomics.github.io/docs/analysis/">Analysis</a>
+    </li>
+    
+    <li class="">
+      <a href="https://mgx-metagenomics.github.io/docs/assembly/">Assembly</a>
+    </li>
+    
+    <li class="">
+      <a href="https://mgx-metagenomics.github.io/docs/visualization/">Visualization</a>
+    </li>
+    
+    <li class="active ">
+      <a href="https://mgx-metagenomics.github.io/docs/custom_pipelines/">Custom Pipelines</a>
+    </li>
+    
+    <li class="">
+      <a href="https://mgx-metagenomics.github.io/docs/references/">References</a>
+    </li>
+    
+  </ul>
+</div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-9">
+          
+<h1 class="title">Custom Pipelines</h1>
+<div class="content ">
+  <details open>
+<summary><b>Table of contents</b></summary>  
+<p><a href="#general">General</a><br>
+<a href="#getting-started">Getting started</a><br>
+<a href="#workflow-requirements">Workflow requirements</a><br>
+<a href="#annotating-metagenome-sequences">Annotating metagenome sequences</a><br>
+<a href="#creating-hierarchical-attributes">Creating hierarchical attributes</a></p>
+</details>
+<br>
+<h2 id="general">General</h2>
+<p>All offered analysis tools provided by the MGX platform are implemented as workflows for the <code>Conveyor</code> <a href="/docs/references/">Linke et al.,2011</a> workflow engine developed by B. Linke. Within Conveyor, tools are provided as so-called <b>nodes</b>, which resemble individual processing steps and implement novel analysis methods by simply arranging and connecting them into a larger workflow.</p>
+<p>Conveyor currently includes plugins providing typical bioinformatics tools like <code>BLAST</code> or <code>HMMer</code> but has recently been extended with dedicated plugins aimed at metagenome analysis, like <code>MetaCV</code>, <code>MetaPhyler</code>, or <code>MetaPhlAn</code>, which all perform taxonomic analysis. A dedicated Conveyor plugin provides access to MGX data structures, thereby enabling the analysis of metagenomes stored in the MGX system with processing tools offered by Conveyor itself.</p>
+<p>While workflow definitions are stored in an XML-based format, a graphical user interface, the <code>Conveyor Designer</code>, enables users to implement new analyses by simply placing and connecting nodes.</p>
+</br>
+<center>
+<p><a href="images/screens/designer.png"><img src="/images/screens/designer.png" width="500" align="center" /></a></p>
+</center>
+<p>The Conveyor Designer application allows easy and user-friendly development of custom analysis algorithms in a graphical way.</p>
+<p>As Conveyor is actively developed and new tools are continously integrated, giving a thorough introduction to Conveyor is beyond the scope of this document. The most up-to-date documentation describing Conveyor itself and the Conveyor Designer in particular can be found at the Conveyor web site:
+</br></p>
+<blockquote>
+<p><strong><a href="http://www.uni-giessen.de/fbz/fb08/Inst/bioinformatik/software/Conveyor">http://www.uni-giessen.de/fbz/fb08/Inst/bioinformatik/software/Conveyor</a></strong></p>
+</blockquote>
+<hr>
+<h2 id="getting-started">Getting started</h2>
+<p>In order to implement a custom workflow, the Conveyor Designer needs to be configured with a definition of available Conveyor plugins and node types. This is easily achieved by importing a plugin dump file, which contains a list of data types and nodes provided by a Conveyor installation.</p>
+<p>To use the Designer to implement a workflow for the MGX framework, a corresponding plugin dump file can be obtained from within MGX by right-clicking on the project name.</p>
+<center>
+<p><a href="images/screens/getdump.png"><img src="/images/screens/getdump.png"  align="center" /></a></p>
+</center>
+<p>A plugin dump file for use with the Conveyor Designer can be obtained from within MGX by right-clicking on the project name.</p>
+<p>Afterward, start the Designer application and define a new provider (<strong>Right-click</strong> on <code>Available providers</code>). Make sure to specify <code>Plugin dump file</code> as the type of plugin set and select the file generated by MGX. Once the plugin dump file has been imported, you can implement new workflows.</p>
+<p>Starting with an empty sheet, nodes can be dragged from the list of all available nodes on the left and placed onto the sheet. Node connections are created by clicking on a node, keeping the mouse button pressed, and releasing it over the connection target node, thus linking; in ambiguous cases, e.g., for nodes with several unconnected inputs/outputs, a dialog will allow to select the desired connection. Nodes may also require node-specific configuration, which can be edited from a nodes context menu. A red border around a node indicates missing configuration items or connections.</p>
+<br>
+<center>
+<p><a href="images/screens/loaddump.png"><img src="/images/screens/loaddump.png"  width="400"/></a></p>
+<p><i>Importing a plugin dump file into the Conveyor Designer.</i></p>
+</center>
+<p><a href="#top">[Top]</a></p>
+<hr>
+<h2 id="workflow-requirements">Workflow requirements</h2>
+<p>In order to design custom Conveyor workflows for later usage within the MGX platform, there are several constraints to be met which will be described in more detail.</p>
+<p>First of all, a dedicated <code>GetMGXJob</code> node has to be present within the workflow; in addition, this node has to be named <code>mgx</code>. During execution of a pipeline within MGX, this node is configured via an external configuration file, providing required information about a jobs context, like <em>e.g.</em> access to a project database and associated storage.</p>
+<center>
+<p><a href="images/screens/getjob.png"><img src="/images/screens/getjob.png"   width="200" /></a></p>
+</center>
+<p><em>The</em> <code>GetMGXJob</code> <em>node provides necessary context for executing a workflow within MGX, such as database access. By convention, this node has to be named</em> <code>mgx</code>.</p>
+<p>Access to metagenome DNA sequences is provided via the <code>ReadCSF</code> node, which will provide all metagenome sequences for a sequencing run object within MGX, except those for which the “discard” flag has already been set. As pipelines are always executed for one single analysis job, this node needs to be connected to the <code>GetMGXJob</code> node.</p>
+<center>
+<p><a href="images/screens/getjobreadcsf.png"><img src="/images/screens/getjobreadcsf.png"   width="400"/></a></p>
+</center>
+<p>The <code>ReadCSF</code> node is used to obtained metagenome sequence data from within MGX; it has one input and needs to be connected to the <code>GetMGXJob</code> node.</p>
+<p>Figure (below) shows a minimal example of a Conveyor-based pipeline for use within the MGX framework. Once executed, the pipeline would set the <em><strong>discard</strong></em> flag for all sequences.</p>
+<center>
+<p><a href="images/screens/simple.png"><img src="/images/screens/simple.png"   width="500" /></a></p>
+</center>
+<p>A minimal working example of a pipeline developed for MGX, which would set the <em><strong>discard</strong></em> flag for all sequences.</p>
+<p><a href="#top">[Top]</a></p>
+<hr>
+<h2 id="annotating-metagenome-sequences">Annotating metagenome sequences</h2>
+<center>
+<p><a href="images/screens/annotate_templ.png"><img src="/images/screens/annotate_templ.png" width="500" /></a></p>
+</center>
+<p>Basic template to illustrate sequence annotation. A <code>StringGenerator</code> is used to generate a label for the attribute type <code>CreateMGXAttributeType</code>, which also requires job context information. The attribute type is required to create attributes, thus the node is connected to the <code>CreateMGXAttribute</code> node. Finally, the annotation can be saved to the project database <code>AnnotateAttribute</code> node</p>
+<p>Annotation of metagenome sequences requires an <strong>attribute type</strong> and an <strong>attribute</strong>. As an example, we will illustrate the implementation of a pipeline for the analysis of GC content within metagenome sequences. We use a <code>StringGenerator</code> node configured to generate the string <strong>GC</strong> to create a label for the attribute type. As GC content is indicated by a number, we appropriately configure the <code>CreateMGXAttributeType</code> node to emit a <strong>basic</strong> (i.e. not hierarchical) as well as numerical <strong>attribute type</strong>.</p>
+<center>
+<p><a href="images/screens/createattrtype.png"><img src="/images/screens/createattrtype.png" width="200" height="200"/></a></p>
+</center>
+<p>Within the configuration dialog for the <code>CreateMGXAttributeType</code> node, structure and type of the generated attribute values are defined.</p>
+<center>
+<p><a href="images/screens/annotate_templ2.png"><img src="/images/screens/annotate_templ2.png" width="600" height="400"/></a></p>
+</center>
+<p>Incomplete example; the <code>ReadCSF</code> node will provide the necessary metagenome sequences to be annotated. Still, there is no actual analysis specified.</p>
+<p>In a second step, we use the <code>ReadCSF</code> node to obtain access to the individual metagenome sequences; as MGX annotates sequences individually, a connection between <code>ReadCSF</code> and <code>AnnotateAttribute</code> is required. Subsequently, we implement the actual analysis, which is provided by the <code>GCContent</code> node. It will process all sequences and emit the corresponding GC content for each of them. To convert these values to appropriate <strong>attributes</strong>, an <strong>attribute type</strong> is required for each value; therefore, a <code>Repeat</code> node is inserted between nodes <strong>5</strong> and <strong>7</strong>.</p>
+<center>
+<p><a href="images/screens/annotate_templ3.png"><img src="/images/screens/annotate_templ3.png" width="600" height="400"/></a></p>
+</center>
+<p>The <code>GCContent</code> node represents the actual analysis step; it is used to determine the GC content of a DNA sequence, which will then be converted into an <strong>attribute</strong>. Since an <strong>attribute type</strong> is required for each <strong>attribute</strong>, a <code>Repeat</code> node is inserted between nodes <strong>5</strong> and <strong>7</strong>.</p>
+<p>Finally, as an annotation always refers to only a part of a sequence, we will need to generate the corresponding start and end coordinates; since GC content refers to the full sequence, we can use an <code>ULongGenerator</code> node configured to <em>emit 0</em> (MGX uses 0-based coordinates) to generate the start coordinate; this node needs to be connected to a <code>Repeat</code> node to generate a series of 0s.</p>
+<p>The end coordinate can be created based on the sequences&rsquo; length, with 1 subtracted, obtained through the <code>GetLength</code> and <code>MinusOne</code> nodes.
+The <code>GetMGXJob</code> node will retain its red border due to missing configuration; this, however, can be ignored, as appropriate configuration will be provided by the MGX framework automatically.</p>
+<center>
+<p><a href="images/screens/annotate_templ4.png"><img src="/images/screens/annotate_templ4.png" width="600" height="500"/></a></p>
+</center>
+<dl>
+<dt><em><strong>Completing the workflow:</strong></em></dt>
+<dd>The <code>ULongGenerator</code> and <code>GetLength</code> nodes are added to specify coordinates for the subregion of the DNA sequence described by the <strong>attribute</strong>; the start coordinate is simply repeated, while 1 is subtracted from the sequences length due to 0-based coordinates.</dd>
+</dl>
+<p><a href="#top">[Top]</a></p>
+<hr>
+<h2 id="creating-hierarchical-attributes">Creating hierarchical attributes</h2>
+<p>Annotation of hierarchical attributes requires a little more effort. The <code>CreateHierarchicalMGXAttribute</code> node is used to obtain the inner structure of the hierarchy in a bottom-up approach. It contains several loops which will be explained in more detail.</p>
+<center>
+<p><a href="images/screens/TreeAnnot.png"><img src="/images/screens/TreeAnnot.png" width="600" height="500"/></a></p>
+</center>
+<p>The <code>CreateHierarchicalMGXAttribute</code> node requires three loops (note double-ended arrow on third loop between nodes 99 and 79) to create the internal structure of the hierarchy. Several connections were removed from the figure for illustrative purposes.</p>
+<p>A single object, e.g. a NCBI taxon generated by the Kraken  <a href="/docs/references/">Wood and Salzberg, 2014</a> classifier, is provided as an input into the node. The first loop is required to obtain the objects parent object, thus defining the hierarchy. In this example it is implemented using the <code>GetParent</code> and <code>GetMajorRankedTaxon</code> nodes, thus making sure only the <strong>major taxonomic ranks</strong> (superkingdom, phylum, class, &hellip;) are included.</p>
+<p>The second loop is used to obtain the corresponding attribute type for an object: it operates on the initial taxon as well as its parents obtained by the first loop. <code>GetTaxonRank</code> and <code>GetRankName</code> nodes provide the corresponding ranks&rsquo; name, e.g. <strong>class</strong>.
+The <code>StringGenerator</code> and <code>Concat</code> nodes are then used to create the attribute type <strong>NCBI_class</strong>. This value is used to create the corresponding attribute type employing the <code>CreateMGXAttributeType</code> node, which is returned into the <code>CreateHierarchicalMGXAttribute</code> node.</p>
+<p>The third and final loop is used to map a data object to its name, which is used to create the attributes value; it is built up using the <code>GetTaxonName</code> node, which delivers its output back into the node.</p>
+<p>Thus, the three loops might be termed as <code>Get parent</code>, <code>Get AttributeType for object</code> and <code>Generate value</code>.</p>
+<p>The <code>CreateHierarchicalMGXAttribute</code> node emits a hierarchical <code>MGXAttribute</code> for the initial data object, with the corresponding <code>AttributeType</code> provided by loop 2 and the MGXAttribute&rsquo;s value obtained using loop 3. Internally, loop 1 is used repetitively until the root node is reached, with all intermediary results passing through loops 2 and 3, thus generating a single path of hierarchical attributes within the taxonomic tree. The output of the <code>CreateHierarchicalMGXAttribute</code> is connected to the <code>AnnotateAttribute</code> node as in the previous example.</p>
+<p>For brevity&rsquo;s sake, several connections are hidden within the image, which have already been explained in the previous section; the <code>CreateMGXAttributeType</code> node needs an incoming connection providing a <code>MGXJob</code>, and the <code>AnnotateAttribute</code> node requires additional connections providing the sequence to be annotated and start/stop coordinates for the subregion which is described by the annotation.</p>
+<p><a href="#top">[Top]</a></p>
+
+</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          
+            
+<div class="social">
+    
+        <a href="https://github.com/MGX-metagenomics" target="blank"><img height="20" width="20" src="/images/social/github.svg" title="Github" alt="Github" /></a>
+    
+        <a href="https://twitter.com/zerostaticio" target="blank"><img height="20" width="20" src="/images/social/twitter.svg" title="Twitter" alt="Twitter" /></a>
+    
+</div>
+
+          
+          
+            <div class="copyright"><a class="MGX" href="https://github.com/MGX-metagenomics">MGX</a></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/scripts.min.302a6fc365d5139fb98cf60bdb8f715d96257ea189161d36c190ccfa8182e569.js"></script>
+  
+
+  
+  
+  
+    
+  
+
+
+</body>
+
+</html>
