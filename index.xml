@@ -2,73 +2,73 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>MGX metagenome analysis platform</title>
-    <link>//localhost:1313/</link>
+    <link>https://mgx-metagenomics.github.io/</link>
     <description>Recent content on MGX metagenome analysis platform</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 22 Feb 2024 14:43:08 +0100</lastBuildDate>
-    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mgx-metagenomics.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
-      <link>//localhost:1313/docs/about/</link>
+      <link>https://mgx-metagenomics.github.io/docs/about/</link>
       <pubDate>Wed, 21 Feb 2024 12:07:18 +0100</pubDate>
-      <guid>//localhost:1313/docs/about/</guid>
+      <guid>https://mgx-metagenomics.github.io/docs/about/</guid>
       <description>About The characterization of microbial communities based on sequencing and analysis of their genetic information has become a popular approach also referred to as metagenomics; in particular, the recent advances in sequencing technologies have enabled researchers to study even the most complex communities.&#xA;Metagenome analysis, the assignment of sequences to taxonomic and functional entities, however, remains a tedious task: large amounts of data need to be processed. There are a number of approaches addressing particular aspects, but scientific questions are often too specific to be answered by a general-purpose method.</description>
     </item>
     <item>
       <title>Install MGX</title>
-      <link>//localhost:1313/docs/install-mgx/</link>
+      <link>https://mgx-metagenomics.github.io/docs/install-mgx/</link>
       <pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate>
-      <guid>//localhost:1313/docs/install-mgx/</guid>
+      <guid>https://mgx-metagenomics.github.io/docs/install-mgx/</guid>
       <description>Needed prerequisites, Java JDK Version 17, Supported operating systems and obtaining MGX.</description>
     </item>
     <item>
       <title>Basics</title>
-      <link>//localhost:1313/docs/basics/</link>
+      <link>https://mgx-metagenomics.github.io/docs/basics/</link>
       <pubDate>Wed, 21 Feb 2024 16:29:29 +0100</pubDate>
-      <guid>//localhost:1313/docs/basics/</guid>
+      <guid>https://mgx-metagenomics.github.io/docs/basics/</guid>
       <description>Obtaining a Project, MGX Roles, Metadata, Connecting to Server, Uploading own files, Importing reference genomes,Search</description>
     </item>
     <item>
       <title>Projects</title>
-      <link>//localhost:1313/docs/projects/</link>
+      <link>https://mgx-metagenomics.github.io/docs/projects/</link>
       <pubDate>Thu, 22 Feb 2024 11:30:22 +0100</pubDate>
-      <guid>//localhost:1313/docs/projects/</guid>
+      <guid>https://mgx-metagenomics.github.io/docs/projects/</guid>
       <description>Handling a Project by creating a new habitat, creating new samples and DNA extracts and how to import sequence data</description>
     </item>
     <item>
       <title>Analysis</title>
-      <link>//localhost:1313/docs/analysis/</link>
+      <link>https://mgx-metagenomics.github.io/docs/analysis/</link>
       <pubDate>Thu, 22 Feb 2024 13:50:25 +0100</pubDate>
-      <guid>//localhost:1313/docs/analysis/</guid>
+      <guid>https://mgx-metagenomics.github.io/docs/analysis/</guid>
       <description>Table of contents Quality&#xA;Selecting a analysis pipeline&#xA;Job Monitoring&#xA;Quality Control Select a sequencing run object, the Quality Control component can be opened from its menubar icon (red circle).&#xA;Quality control reports generated within MGX should be inspected before proceding with data analysis.&#xA;MGX currently offers three types of QC reports:&#xA;Distribution of GC content sequence length nucleotide distribution within the DNA sequences Those can be used to evaluate overall sequence data quality and check for possible signs of contamination.</description>
     </item>
     <item>
       <title>Assembly</title>
-      <link>//localhost:1313/docs/assembly/</link>
+      <link>https://mgx-metagenomics.github.io/docs/assembly/</link>
       <pubDate>Thu, 22 Feb 2024 14:38:10 +0100</pubDate>
-      <guid>//localhost:1313/docs/assembly/</guid>
+      <guid>https://mgx-metagenomics.github.io/docs/assembly/</guid>
       <description>Assembling a metagenome or metatranscriptome Since MGX 2.0, we support the assembly and analysis of both metagenomes and metatranscriptomes; for this, we provide workflows targeting QC, (co-)assembly, gene prediction, taxonomic binning, completeness assessment, and abundance quantification.&#xA;For metatranscriptomes, an additional step is implemented for the removal of ribosomal RNA sequences prior to the assembly, and binning is not performed.&#xA;To create an assembly, select all sequencing runs that should be co-assembled within the Project Explorer window and select the Assemble entry from the context menu.</description>
     </item>
     <item>
       <title>Visualization</title>
-      <link>//localhost:1313/docs/visualization/</link>
+      <link>https://mgx-metagenomics.github.io/docs/visualization/</link>
       <pubDate>Thu, 22 Feb 2024 14:43:08 +0100</pubDate>
-      <guid>//localhost:1313/docs/visualization/</guid>
+      <guid>https://mgx-metagenomics.github.io/docs/visualization/</guid>
       <description>Table of contents Result visualization&#xA;Exporting sequences&#xA;Biodiversity indices&#xA;Displaying reference mappings&#xA;Result visualization The Visualization component actually consists of two separate windows. The Group Window is located at the bottom and used to create, name and define groups used for data display. Sequencing runs can be added to individual groups using Drag and Drop.&#xA;While any sequencing run can be present in several groups simultaneously, it is impossible to add it to a group more than once.</description>
     </item>
     <item>
       <title>Costum Pipelines</title>
-      <link>//localhost:1313/docs/costum_pipelines/</link>
+      <link>https://mgx-metagenomics.github.io/docs/costum_pipelines/</link>
       <pubDate>Wed, 21 Feb 2024 13:22:16 +0100</pubDate>
-      <guid>//localhost:1313/docs/costum_pipelines/</guid>
+      <guid>https://mgx-metagenomics.github.io/docs/costum_pipelines/</guid>
       <description>Table of contents General&#xA;Getting started&#xA;Workflow requirements&#xA;Annotating metagenome sequences&#xA;Creating hierarchical attributes&#xA;General All offered analysis tools provided by the MGX platform are implemented as workflows for the Conveyor Linke et al.,2011 workflow engine developed by B. Linke. Within Conveyor, tools are provided as so-called nodes, which resemble individual processing steps and implement novel analysis methods by simply arranging and connecting them into a larger workflow.&#xA;Conveyor currently includes plugins providing typical bioinformatics tools like BLAST or HMMer but has recently been extended with dedicated plugins aimed at metagenome analysis, like MetaCV, MetaPhyler, or MetaPhlAn, which all perform taxonomic analysis.</description>
     </item>
     <item>
       <title>References</title>
-      <link>//localhost:1313/docs/references/</link>
+      <link>https://mgx-metagenomics.github.io/docs/references/</link>
       <pubDate>Wed, 21 Feb 2024 12:57:39 +0100</pubDate>
-      <guid>//localhost:1313/docs/references/</guid>
+      <guid>https://mgx-metagenomics.github.io/docs/references/</guid>
       <description>Altschul et al., 1990 Altschul, S. F., Gish, W., Miller, W., Myers, E. W., and Lipman, D. J. (1990).Basic local alignment search tool. Journal of molecular biology, 215(3):403–410. Hughes et al., 2002 Hughes, J. B., Hellmann, J. J., Ricketts, T. H., and Bohannan, B. J. (2002). Counting the uncountable: Statistical approaches to estimating microbial diversity. Applied and environmental microbiology, 68(1):448. Langmead and Salzberg, 2012 Langmead, B. and Salzberg, S. L.</description>
     </item>
   </channel>
