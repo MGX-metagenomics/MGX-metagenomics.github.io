@@ -182,6 +182,7 @@
 <blockquote>
 <p><strong><a href="http://www.uni-giessen.de/fbz/fb08/Inst/bioinformatik/software/Conveyor">http://www.uni-giessen.de/fbz/fb08/Inst/bioinformatik/software/Conveyor</a></strong></p>
 </blockquote>
+<p><a href="#top">[Top]</a></p>
 <hr>
 <h2 id="getting-started">Getting started</h2>
 <p>In order to implement a custom workflow, the Conveyor Designer needs to be configured with a definition of available Conveyor plugins and node types. This is easily achieved by importing a plugin dump file, which contains a list of data types and nodes provided by a Conveyor installation.</p>
@@ -200,17 +201,17 @@
 <p><a href="#top">[Top]</a></p>
 <hr>
 <h2 id="workflow-requirements">Workflow requirements</h2>
-<p>In order to design custom Conveyor workflows for later usage within the MGX platform, there are several constraints to be met which will be described in more detail.</p>
-<p>First of all, a dedicated <code>GetMGXJob</code> node has to be present within the workflow; in addition, this node has to be named <code>mgx</code>. During execution of a pipeline within MGX, this node is configured via an external configuration file, providing required information about a jobs context, like <em>e.g.</em> access to a project database and associated storage.</p>
+<p>To design custom Conveyor workflows for later usage within the MGX platform, several constraints must be met, which will be described in more detail.</p>
+<p>First of all, a dedicated <code>GetMGXJob</code> node must be present within the workflow; in addition, this node has to be named <code>mgx</code>. During the execution of a pipeline within MGX, this node is configured via an external configuration file, providing required information about the context of a job, <em>, e.g.,</em> access to a project database and associated storage.</p>
 <center>
 <p><a href="images/screens/getjob.png"><img src="/images/screens/getjob.png"   width="200" /></a></p>
 </center>
-<p><em>The</em> <code>GetMGXJob</code> <em>node provides necessary context for executing a workflow within MGX, such as database access. By convention, this node has to be named</em> <code>mgx</code>.</p>
+<p>The <code>GetMGXJob</code> node provides the necessary context for executing a workflow within MGX, such as database access. By convention, this node has to be named <code>mgx</code>.</p>
 <p>Access to metagenome DNA sequences is provided via the <code>ReadCSF</code> node, which will provide all metagenome sequences for a sequencing run object within MGX, except those for which the “discard” flag has already been set. As pipelines are always executed for one single analysis job, this node needs to be connected to the <code>GetMGXJob</code> node.</p>
 <center>
 <p><a href="images/screens/getjobreadcsf.png"><img src="/images/screens/getjobreadcsf.png"   width="400"/></a></p>
 </center>
-<p>The <code>ReadCSF</code> node is used to obtained metagenome sequence data from within MGX; it has one input and needs to be connected to the <code>GetMGXJob</code> node.</p>
+<p>The <code>ReadCSF</code> node obtains metagenome sequence data from within MGX; it has one input and needs to be connected to the <code>GetMGXJob</code> node.</p>
 <p>Figure (below) shows a minimal example of a Conveyor-based pipeline for use within the MGX framework. Once executed, the pipeline would set the <em><strong>discard</strong></em> flag for all sequences.</p>
 <center>
 <p><a href="images/screens/simple.png"><img src="/images/screens/simple.png"   width="500" /></a></p>

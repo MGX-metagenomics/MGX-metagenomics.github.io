@@ -13,7 +13,7 @@
       <link>https://mgx-metagenomics.github.io/docs/about/</link>
       <pubDate>Wed, 21 Feb 2024 12:07:18 +0100</pubDate>
       <guid>https://mgx-metagenomics.github.io/docs/about/</guid>
-      <description>About The characterization of microbial communities based on sequencing and analysis of their genetic information has become a popular approach also referred to as metagenomics; in particular, the recent advances in sequencing technologies have enabled researchers to study even the most complex communities.&#xA;Metagenome analysis, the assignment of sequences to taxonomic and functional entities, however, remains a tedious task: large amounts of data need to be processed. There are a number of approaches addressing particular aspects, but scientific questions are often too specific to be answered by a general-purpose method.</description>
+      <description>Table of contents About&#xA;Features&#xA;Citation&#xA;Demo&#xA;Funding&#xA;Additional links&#xA;About The characterization of microbial communities based on sequencing and analysis of their genetic information, also referred to as metagenomics, has become a popular approach; in particular, the recent advances in sequencing technologies have enabled researchers to study even the most complex communities.&#xA;Metagenome analysis, the assignment of sequences to taxonomic and functional entities, however, remains a tedious task: large amounts of data need to be processed.</description>
     </item>
     <item>
       <title>Install MGX</title>
